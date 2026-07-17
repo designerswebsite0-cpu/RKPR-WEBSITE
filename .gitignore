@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw RAG sources
+RKPR_Phase3_RAG_Ready_AUDITED.zip
+RKPR_Phase3_RAG_Ready_AUDITED/

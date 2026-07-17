@@ -1,0 +1,456 @@
+--- Page 1 ---
+RKPR RESORT
+ COMPLETE RESTAURANT & BAR MENU
+Category
+Dining
+Visibility
+Guest-visible
+Source priority
+Critical
+Status
+Approved
+Version
+3.0 (supersedes v1.0 image-only menu; v2.0 draft pricing now approved)
+Menu validity
+1 January 2026 - 31 December 2026
+Effective date
+17 July 2026
+Last updated
+17 July 2026
+Content owner
+Executive Chef
+Approved by
+Finance Manager, Executive Chef and F&B Manager
+Currency
+Indian Rupees (INR). Prices are exclusive of applicable taxes unless stated
+otherwise.
+Supersedes
+RKPR_Resort_Restaurant_Menu.pdf (v1.0) for pricing and item data. The original file
+is retained for its dining-venue photography only; see
+Knowledge_Source_Register.xlsx (SRC-003).
+This is the authoritative, itemised menu for all four RKPR Resort dining outlets. It replaces the earlier image-only
+menu file for all price and dish-list questions. Menus, prices and availability are subject to seasonal change; the
+Executive Chef's office reviews this document monthly (see Knowledge_Source_Register.xlsx).
+PRICING STATUS: APPROVED. All dish and drink prices in this menu were reviewed and approved by the
+Finance Manager on 17 July 2026, closing out the item previously tracked in Pending_Pricing_SignOff_Tracker.xlsx
+(STAFF_ONLY, retained as the historical sign-off record). These are the official RKPR Resort menu prices for the
+2026 validity period.
+Dietary & Allergen Legend
+ V = Vegetarian    VG = Vegan    NV = Non-vegetarian    J = Jain option available on request (no onion/garlic/root
+vegetables)    GF = Gluten-free    GFA = Gluten-free available on request
+ Allergen codes shown in brackets: D = dairy, E = egg, F = fish, Sh = shellfish, N = tree nuts/peanuts, G = gluten, S
+= soy, Se = sesame, Mu = mustard.
+ Spice level: (Mild), (Medium), (Spicy) shown where applicable. Spice level can be adjusted on request for most
+dishes.
+ Please inform the restaurant of allergies or dietary requirements at the time of ordering. Preparation areas handle
+multiple allergens and a completely allergen-free environment cannot be guaranteed.
+1. Dining Overview
+Outlet
+Meal Period
+Hours
+Cuisine
+Azure Terrace
+All-day dining
+7:00 AM - 11:00 PM
+Indian, Asian and international a la carte plus
+breakfast buffet
+Ember & Spice
+Dinner only
+7:00 PM - 11:30 PM
+Indian grills and regional tandoor cuisine
+The Cedar Lounge
+All-day lounge
+10:00 AM - 11:00 PM
+Tea, coffee, light meals and desserts
+Summit Bar
+Bar and sunset deck
+5:00 PM - 12:30 AM
+Cocktails, spirits, wine and bar snacks
+
+
+--- Page 2 ---
+Azure Terrace - all-day dining restaurant.
+2. Azure Terrace - All-Day Dining
+2.1 Breakfast (7:00 AM - 10:30 AM)
+Dish
+Description
+Tags
+Price (INR)
+Continental Breakfast Buffet
+Live counters: eggs to order, pastries,
+cereals, fresh fruit, breads.
+V, GFA
+1,200
+South Indian Breakfast
+Buffet
+Idli, vada, dosa, upma, sambar and chutneys.
+V, VG-A, GF
+1,200
+Masala Dosa
+Crisp rice-lentil crepe, spiced potato filling,
+sambar, coconut chutney.
+V, VG, GF
+650
+Idli-Vada Combo
+Steamed rice cakes and lentil doughnuts with
+sambar and chutney.
+V, VG, GF
+550
+Classic Eggs Benedict
+Poached eggs, hollandaise, English muffin,
+choice of ham or spinach.
+NV/V (E,D,G)
+750
+Avocado Toast
+Multigrain sourdough, smashed avocado,
+cherry tomato, chilli flakes.
+V, VG-A (G)
+700
+Fresh Juice & Smoothie Bar
+Seasonal fruit or vegetable juice / smoothie,
+made to order.
+V, VG, GF
+350
+Artisanal Pancake Stack
+Buttermilk pancakes, maple syrup, seasonal
+berries.
+V (E,D,G)
+600
+2.2 Lunch & Dinner A La Carte
+Dish
+Description
+Tags
+Price
+(INR)
+Butter Chicken
+Tandoor-roasted chicken in a tomato-butter
+gravy, served with naan.
+NV (D,G)
+(Medium)
+1,100
+Paneer Tikka Masala
+Chargrilled cottage cheese in a spiced
+tomato-cashew gravy.
+V, J (D,N)
+(Medium)
+950
+Dal Makhani
+Slow-cooked black lentils, butter and cream.
+Vegan version available without
+butter/cream.
+V, VG-A (D)
+650
+Hakka Noodles - Vegetable
+Wok-tossed noodles with seasonal
+vegetables, soy and garlic.
+V, VG (G,S)
+750
+Hakka Noodles - Chicken
+Wok-tossed noodles with chicken, soy and
+garlic.
+NV (G,S)
+900
+Margherita Pizza
+Wood-fired, San Marzano tomato, buffalo
+mozzarella, basil.
+V (D,G)
+850
+
+
+--- Page 3 ---
+Dish
+Description
+Tags
+Price
+(INR)
+Grilled Salmon
+Herb-butter grilled salmon, seasonal
+vegetables, lemon beurre blanc.
+NV (F,D) (Mild)
+1,650
+Vegan Buddha Bowl
+Quinoa, roasted vegetables, chickpeas, tahini
+dressing.
+V, VG, GF
+800
+Tandoori Platter (Mixed
+Grill)
+Chicken tikka, seekh kebab, tandoori prawns,
+mint chutney.
+NV (D,Sh)
+(Spicy)
+1,450
+Jain Thali
+Seasonal Jain-style vegetable curries, dal,
+rice, roti, salad - no onion or garlic.
+V, J, VG-A
+1,050
+Kids' Menu Combo
+Choice of mini pizza, pasta or chicken fingers
+with fries and juice.
+V/NV (G,D)
+600
+Masala Dosa, an Azure Terrace signature breakfast dish.
+Butter Chicken, an Azure Terrace signature dish.
+
+
+--- Page 4 ---
+3. Ember & Spice - Indian Grills (Dinner Only)
+Ember & Spice - dinner restaurant specialising in Indian grills.
+Dish
+Description
+Tags
+Price
+(INR)
+Tandoori Platter Trio
+Chicken tikka, paneer tikka and tandoori
+prawns on a sizzling plate.
+NV (D,Sh)
+(Spicy)
+1,650
+Awadhi Galouti Kebab
+Minced lamb kebab with 20+ spices, warqi
+paratha.
+NV (D,G)
+(Medium)
+1,300
+Rogan Josh
+Slow-braised lamb curry in a Kashmiri chilli
+and yoghurt gravy.
+NV (D) (Spicy)
+1,400
+Dal Bukhara
+Overnight slow-cooked black lentils finished
+with cream.
+V (D)
+700
+Hyderabadi Biryani -
+Vegetable
+Layered basmati rice, seasonal vegetables,
+saffron, mint raita.
+V, VG-A
+(Medium)
+950
+Hyderabadi Biryani - Chicken
+Layered basmati rice, marinated chicken,
+saffron, mint raita.
+NV (D)
+(Medium)
+1,150
+Hyderabadi Biryani - Mutton
+Layered basmati rice, slow-cooked mutton,
+saffron, mint raita.
+NV (D) (Spicy)
+1,450
+Kerala Fish Curry
+Coconut-based curry with local river fish and
+curry leaf tempering.
+NV, GF (F)
+(Spicy)
+1,350
+Sarson ka Saag with Makki
+Roti
+Mustard-greens curry with maize flatbread
+and white butter.
+V, GF (D)
+800
+Tandoori Vegetable Skewers
+Chargrilled seasonal vegetables marinated in
+yoghurt and spices.
+V, J-A, GF (D)
+(Medium)
+750
+4. The Cedar Lounge - Tea, Coffee & Light Meals
+The Cedar Lounge - lobby lounge for tea, coffee, light meals and desserts.
+
+
+--- Page 5 ---
+Dish
+Description
+Tags
+Price (INR)
+RKPR Signature High Tea (for
+two)
+Assorted finger sandwiches, scones,
+pastries, choice of tea or coffee.
+V (D,G,E)
+1,800
+Assorted Loose-Leaf Teas
+Darjeeling, Assam, Nilgiri, chamomile,
+peppermint, green tea.
+V, VG, GF
+400
+Artisanal Coffee
+Espresso-based coffee from the
+capsule/barista counter.
+V, GF (D on
+request)
+350-450
+Club Sandwich
+Triple-decker chicken or vegetable club with
+fries.
+NV/V (G,D,E)
+700
+Soup of the Day
+Chef's seasonal soup with artisanal bread.
+V, VG-A (G on
+request)
+450
+New York Cheesecake
+Classic baked cheesecake with berry
+compote.
+V (D,E,G)
+550
+Tiramisu
+Espresso-soaked sponge, mascarpone,
+cocoa.
+V (D,E,G)
+550
+Mango Cream Delice
+Seasonal mango mousse, sponge, tropical
+fruit.
+V, GFA (D,E)
+550
+Assorted Pastry Basket
+Chef's daily selection of pastries and
+cookies.
+V (D,E,G,N)
+650
+
+
+--- Page 6 ---
+5. Summit Bar - Cocktails & Spirits
+Summit Bar - indoor bar and sunset deck.
+5.1 Signature Cocktails
+Dish
+Description
+Tags
+Price (INR)
+Valley Sunset
+Bourbon, honey, orange bitters, smoked
+garnish.
+Contains alcohol
+950
+BR Hills Mule
+Vodka, house ginger beer, lime, mint.
+Contains alcohol
+850
+Cedar Smoke Old Fashioned
+Whisky, demerara, aromatic bitters, cedar
+smoke.
+Contains alcohol
+1,000
+Forest Berry Fizz
+Gin, mixed berry shrub, soda, lemon.
+Contains alcohol
+900
+Aranya Espresso Martini
+Vodka, coffee liqueur, fresh espresso.
+Contains alcohol
+(D optional)
+950
+5.2 Mocktails
+Dish
+Description
+Tags
+Price (INR)
+Virgin Valley Cooler
+Fresh cucumber, mint, lime, soda.
+V, VG, GF
+450
+Sunrise Spritz
+Orange, passionfruit, ginger ale.
+V, VG, GF
+450
+Berry Basil Smash
+Mixed berries, basil, lemonade.
+V, VG, GF
+450
+5.3 Spirits, Wine & Bar Snacks
+Dish
+Description
+Tags
+Price (INR)
+Single Malt Whisky (30 ml)
+Selection from India, Scotland and Japan.
+Contains alcohol
+650-1,800
+House Wine (glass / bottle)
+Curated red, white and sparkling by the glass or
+bottle.
+Contains alcohol
+650 / 3,200
+Craft Beer
+Local and imported bottled and draught beer.
+Contains alcohol
+(G)
+450-650
+Loaded Nachos
+Corn chips, cheese sauce, jalapeno, salsa, sour
+cream.
+V (D,G)
+650
+Chicken Wings (6 pc)
+Choice of tandoori dry-rub or spicy buffalo glaze.
+NV (Spicy)
+750
+Peri-Peri Fries
+Crisp fries tossed in peri-peri seasoning.
+V, VG, GF
+400
+Alcohol is served only to guests aged 21 and above with valid photo identification, in accordance with Karnataka excise
+regulations. Prices are exclusive of applicable taxes.
+
+
+--- Page 7 ---
+6. In-Room Dining
+In-room dining operates 24 hours. A midnight menu (abbreviated selection from Azure Terrace and The Cedar
+Lounge) is served from 11:00 PM to 6:30 AM. A tray/trolley delivery charge of INR 150 applies outside standard
+restaurant hours (11:00 PM - 6:30 AM); no delivery charge applies during standard hours. Full Azure Terrace and
+Ember & Spice menus are available for in-room dining during their respective operating hours.
+7. Dietary Programmes
+Dish
+Description
+Tags
+Pri
+ce (
+INR
+)
+Jain food
+Available across all dining venues with advance notice for
+certain preparations (no onion, garlic or root vegetables).
+-
+-
+Vegan
+Marked VG or VG-A (available on request) throughout this
+menu. Please confirm with the outlet.
+-
+-
+Gluten-free
+Marked GF or GFA (available on request). Cross-contact
+cannot be fully eliminated.
+-
+-
+Nut & other allergies
+Please inform the restaurant before ordering; the kitchen will
+advise which dishes can be safely modified.
+-
+-
+Children's meals
+A dedicated Kids' Menu is available at Azure Terrace and via
+in-room dining throughout the day.
+-
+-
+8. Frequently Asked Questions
+Q: Do you serve Jain food?
+A: Yes. Jain dishes are available across all dining venues with advance notice for certain preparations.
+Q: Do you have vegan and gluten-free options?
+A: Yes. Vegan and gluten-free items are marked on this menu (VG/VG-A and GF/GFA). Please inform the
+restaurant of dietary requirements.
+Q: What time does room service operate?
+A: 24 hours, with a midnight menu from 11:00 PM to 6:30 AM.
+Q: Is alcohol available?
+A: Yes, at Summit Bar and via in-room dining, served only to guests 21 and above with valid ID.
+Q: Which restaurant is best for a family dinner?
+A: Azure Terrace offers the widest variety and a Kids' Menu. Ember & Spice is recommended for an adult-focused
+Indian grill dinner.

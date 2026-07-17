@@ -1,0 +1,408 @@
+--- Page 1 ---
+RKPR RESORT
+PAYMENT AND BILLING
+Category: Payments and Billing
+Visibility: Guest-visible with restricted internal sections
+Source priority: Critical
+Version: 1.0
+Effective date: 17 July 2026
+Last reviewed: 17 July 2026
+Next review: 17 October 2026
+Content owner: Finance Manager
+Approved by: General Manager and Finance Manager
+1. Payment Policy Overview
+RKPR Resort accepts approved digital and in-person payment methods in Indian Rupees ( ₹ ). A reservation becomes
+confirmed only after the required payment is received and verified by the payment gateway or Finance Team.
+A booking may remain tentative while payment is pending, under verification or partially received. Tentative bookings
+may expire if the required payment is not completed by the stated deadline.
+Guests may be informed about payment methods, advance requirements, billing timelines, refund timelines, invoice
+availability and safety rules. Refund approval, fee waivers, price changes, compensation, manual confirmation and
+disputed payments require authorised staff.
+2. Accepted Payment Methods
+Method Availability Verification Important conditions
+UPI Online and at resort Usually immediate Subject to successful gateway confirmation
+Credit card Online and at resort Usually immediate Visa, Mastercard, RuPay and selected international
+cards
+Debit card Online and at resort Usually immediate Bank restrictions may apply
+Net banking Online Usually immediate Subject to bank and gateway availability
+Secure payment
+link Online Usually immediate Link must be issued through an official resort
+channel
+Bank transfer Online/manual Manual verification Booking reference must be mentioned
+Cash At resort only Immediate after
+receipt Subject to legal cash-payment limits
+Digital wallet Where supported Usually immediate Availability depends on booking channel
+Corporate billing Approved accounts
+only Manual Requires prior credit approval
+Travel-agent
+voucher Approved agents only Manual Voucher terms must match the booking
+
+--- Page 2 ---
+Method Availability Verification Important conditions
+Gift voucher Eligible services only Manual/system check Subject to validity and voucher conditions
+Payment availability may vary by booking channel.
+3. Reservation Advance Requirements
+Standard reservations
+A 30% advance is required to confirm a standard room reservation.
+The balance is payable before arrival or during check-in, as stated in the booking confirmation.
+The booking remains tentative until the advance is verified.
+Standard payment links generally remain valid for 6 hours.
+Peak-season reservations
+Peak season includes 20 December to 5 January, selected public holidays, festival weekends and announced long
+weekends.
+Peak-season reservations may require:
+100% advance payment
+Stricter cancellation terms
+Non-refundable or partially refundable rates
+Mandatory meal supplements on selected dates
+Last-minute reservations
+Bookings made within 24 hours of arrival may require full payment before confirmation. Same-day and walk-in
+reservations must be paid according to availability and the rate plan offered at that time.
+Group, wedding and event reservations
+These normally require:
+Initial booking deposit
+Milestone-based payments
+Final payment before the event or group arrival
+Separate damage or security deposit
+Signed contract with cancellation and rescheduling terms
+4. Payment Deadlines and Booking Expiry
+If the payment deadline passes without successful verification:
+The booking may expire automatically.
+Held inventory may be released.
+The original price and room availability are no longer guaranteed.
+
+--- Page 3 ---
+A fresh payment link may be issued only after availability is checked again.
+Deadline extensions require staff approval.
+5. Payment Link Procedure
+Official payment links may be sent through:
+The guest’s registered email
+The registered WhatsApp number
+The secure RKPR Resort booking website
+Before paying, the guest should verify the resort name, booking reference, amount, guest name and secure payment
+page.
+The resort will never request:
+OTP
+Card PIN
+CVV
+Full card number
+UPI PIN
+Banking password
+A payment screenshot is supporting evidence only. It does not confirm payment until the resort system or Finance Team
+verifies the transaction.
+6. Payment Verification and Statuses
+Common payment statuses are:
+Payment initiated
+Payment pending
+Payment successful
+Payment failed
+Payment under verification
+Payment partially received
+Payment refunded
+Payment partially refunded
+Payment disputed
+A bank debit message does not always mean RKPR Resort received the funds. A booking is confirmed only when
+payment is marked successful and verified.
+Guests reporting payment issues should provide the booking reference, transaction ID, payment date, amount and
+payment method.
+7. Taxes, Fees and Additional Charges
+
+--- Page 4 ---
+Applicable taxes are charged according to prevailing Indian tax laws. The exact tax amount depends on room rate,
+service category and current regulations. The official invoice shows the final tax breakdown.
+The resort should not promise an exact tax amount unless it is available from the live billing or booking system.
+Common additional charges
+Extra-person and extra-bed charges
+Child meal charges where applicable
+Early check-in and late check-out
+Airport transfers
+Spa and activities
+Laundry and dry cleaning
+Mini-bar consumption
+Celebration arrangements
+Damage or missing items
+Event-related services
+Mandatory festive meal supplements
+A room rate includes only the services stated in the confirmed rate plan.
+8. Security Deposit
+Selected premium villas may require a refundable security deposit of ₹ 5,000. Group and event bookings may require a
+higher deposit.
+The deposit may be collected before arrival or during check-in. Refund is subject to room inspection and settlement of
+outstanding charges.
+Possible deductions include:
+Property damage
+Missing items
+Excessive cleaning
+Smoking violations
+Unpaid dining, spa, transfer or activity charges
+Event damage
+Lost access cards or keys
+Approved deposit refunds are initiated within 7 business days. Bank processing time may be additional.
+9. Billing During the Stay
+Approved charges may be posted to the room folio, including:
+Restaurant and room-service orders
+Spa treatments
+Laundry
+Activities
+
+--- Page 5 ---
+Transfers
+Mini-bar
+Celebration arrangements
+Extra beds or guests
+Late check-out
+The guest may be asked to sign the charge slip and confirm the room number and name. Some high-value or third-party
+services may require immediate payment.
+Guests may request a running bill from the Front Office.
+10. Final Bill and Checkout Settlement
+Before checkout, the resort prepares the final bill and adjusts:
+Advance payments
+Posted services
+Applicable taxes
+Security deposit
+Outstanding balance
+Guests may normally use one or more approved cards, UPI, cash within legal limits, or a permitted combination. Split
+payment should be requested before final settlement.
+If a guest disputes a charge, the item is reviewed by the relevant department. If the billing system is temporarily
+unavailable, a provisional statement may be provided and the official invoice issued later.
+11. GST and Corporate Invoices
+GST invoices are available when complete details are supplied before final billing:
+Registered company name
+GSTIN
+Billing address
+State
+Place-of-supply details
+Invoice corrections after checkout are subject to Finance Team review and legal limitations. Corporate billing requires
+prior approval and cannot be assumed from a company name alone.
+12. Split Billing and Separate Invoices
+The resort may support:
+Accommodation paid by one guest and incidentals by another
+Bill split between two cards
+Separate invoices for multiple rooms
+Personal and corporate expense separation
+Separate event and accommodation billing
+
+--- Page 6 ---
+Requests should be made before checkout. Tax and system restrictions may limit changes after invoice generation.
+13. Refund Policy
+Refunds require approval and are normally returned to the original payment method.
+Approved refunds are initiated within 7–10 business days.
+International-card refunds may take longer.
+Banks and gateways may require additional processing time.
+Online card or UPI payments are not normally refunded in cash.
+Non-refundable bookings remain subject to their confirmed rate conditions.
+The resort provides a refund reference once available.
+14. Cancellation-Related Payments
+The refund amount depends on:
+Rate plan
+Cancellation date
+Advance amount
+Peak-season conditions
+No-show status
+Early departure
+Rescheduling request
+Package or event terms
+Medical, emergency and force-majeure exceptions require authorised approval. Standard policy should be explained
+without promising a waiver.
+15. Failed Payments
+Common causes include bank decline, insufficient balance, UPI timeout, expired link, network failure, gateway error and
+international-card restrictions.
+The guest may:
+1. Check the bank status.
+2. Wait briefly before retrying.
+3. Request a fresh payment link.
+4. Use another approved method.
+5. Contact the issuing bank.
+Sensitive credentials must never be shared.
+16. Pending Payments
+When an amount is deducted but the status remains pending:
+
+--- Page 7 ---
+Avoid making repeated payments until advised.
+Wait up to 30 minutes for gateway reconciliation.
+Share the booking reference and transaction ID.
+Finance may raise an investigation if the payment remains unresolved.
+The booking remains tentative until payment is verified.
+17. Duplicate Payments
+Duplicate-payment process:
+1. Guest reports both transaction references.
+2. Booking and settlement records are checked.
+3. Finance verifies whether both payments reached the resort.
+4. Any confirmed excess amount is refunded or adjusted after approval.
+An immediate refund must not be promised before verification.
+18. Partial Payments
+Partial payment is allowed only when permitted by the rate plan, contract or approved payment schedule. The minimum
+required advance must be received by the stated deadline.
+Missing a group or event payment milestone may result in cancellation, revised pricing or release of reserved inventory.
+19. Bank Transfers
+Bank transfers require manual verification. Guests must mention the booking reference and use only bank details supplied
+through an authorised resort quotation or payment instruction.
+Account name: RKPR Resort
+Bank details: Available only through an official authorised communication.
+Weekend, holiday, interbank and international transfers may take longer. Transfer charges and short payments are the
+guest’s responsibility unless otherwise agreed.
+20. International Payments
+Selected international cards are accepted. Transactions settle in Indian Rupees. The guest’s bank may apply foreign
+transaction or currency-conversion fees.
+International transfers and refunds may take longer. Identification may be required for certain high-value transactions.
+21. Travel-Agent and Third-Party Bookings
+OTA and travel-agent bookings may be prepaid, pay-at-property or voucher-based. The resort can only modify charges
+and terms that fall within its agreement with the platform or agent.
+
+--- Page 8 ---
+For platform-collected payments, the guest may need to contact the booking platform directly for refund, billing or card-
+related issues.
+22. Gift Vouchers and Resort Credits
+Gift vouchers and credits are subject to:
+Validity date
+Eligible services
+Advance reservation
+Transferability conditions
+Combination restrictions
+Partial-use rules
+Expiry rules
+Expired, lost or unused vouchers are not refundable unless the voucher terms expressly permit it.
+23. Payment Disputes and Corrections
+For an incorrect or unrecognised charge, collect:
+Booking reference
+Invoice number
+Transaction ID
+Date and amount
+Description of the disputed item
+Finance and the relevant operating department will review the evidence before correcting or refunding a charge.
+24. Payment Safety and Fraud Prevention
+Guests should:
+Pay only through approved resort channels.
+Avoid personal bank accounts shared by unknown individuals.
+Verify the sender, amount and payment domain.
+Use QR codes only when issued through an official channel.
+Hide sensitive information in screenshots.
+Report suspicious payment requests immediately.
+The resort never asks for OTPs, PINs or CVVs.
+25. Human Handoff and Approval Rules
+Authorised human assistance is required for:
+Refund approval or exception
+Cancellation-fee waiver
+Discount negotiation
+
+--- Page 9 ---
+Price override
+Compensation
+Security-deposit dispute
+Chargeback
+Corporate credit approval
+Unverified bank transfer
+Duplicate payment
+Suspicious transaction
+Payment below the required amount
+Manual booking confirmation
+Event-payment amendment
+No exception should be promised before approval.
+26. Guest-Visible and Restricted Information
+Guest-visible Restricted/internal
+Accepted payment methodsPayment gateway credentials
+Advance requirements Internal bank settlement reports
+Payment deadlines Refund approval limits
+Refund timeline Fraud-detection rules
+Tax explanation Manual overrides
+Security-deposit rules Finance escalation hierarchy
+Invoice availability Staff passwords
+Failed-payment guidance Reconciliation processes
+27. Frequently Asked Payment Questions
+Q: How much advance is required?
+A: Standard reservations require a 30% verified advance.
+Q: Do you accept UPI?
+A: Yes, through approved online and resort payment channels.
+Q: Can I pay at check-in?
+A: The remaining balance may be paid at check-in when the confirmed rate plan permits it.
+Q: Is my booking confirmed after I send a screenshot?
+A: No. Confirmation requires successful payment verification.
+Q: Are taxes included?
+A: The booking summary states whether taxes are included. The official invoice shows the final tax breakdown.
+Q: Is there a security deposit?
+A: Selected premium villas may require a refundable ₹ 5,000 deposit.
+
+--- Page 10 ---
+Q: Can I split payment between two cards?
+A: Usually yes, when requested before final settlement.
+Q: Can I get a GST invoice?
+A: Yes, when complete GST and billing details are provided before final billing.
+Q: How long does a refund take?
+A: Approved refunds are initiated within 7–10 business days.
+Q: My payment was deducted but is pending. What should I do?
+A: Do not pay again immediately. Share the booking reference and transaction ID for verification.
+Q: What happens if I paid twice?
+A: Finance verifies both transactions and refunds or adjusts any confirmed excess payment.
+Q: Can I use an international card?
+A: Selected international cards are accepted, subject to bank approval.
+Q: Can I pay in cash?
+A: Yes, at the resort within applicable legal limits.
+Q: Can the cancellation fee be waived?
+A: Only authorised staff may approve an exception.
+Q: Can someone else pay for my booking?
+A: Yes, but the payment must be linked to the correct guest and booking reference.
+Q: Can I change the payment method after booking?
+A: The unpaid balance may use another approved method. A completed payment is not simply moved between methods.
+Q: Can I receive separate invoices?
+A: Yes, when requested before checkout and permitted by billing rules.
+Q: Are restaurant and spa charges added to the room?
+A: They may be posted to the room folio when room-charging is authorised.
+Q: What happens if my card fails at checkout?
+A: Another approved payment method must be used.
+Q: Can a refund be sent to another bank account?
+A: Refunds normally return to the original payment method.
+28. Common Scenarios
+Guest situation Correct handling Human handoff
+Guest sends payment
+screenshot Explain that verification is required Only if payment remains
+unverified
+UPI payment pending Collect reference and transaction ID; advise against
+repeat payment Yes if unresolved
+Duplicate deduction Collect both transaction IDs Yes
+
+--- Page 11 ---
+Guest situation Correct handling Human handoff
+Refund request Explain standard policy Yes
+Cancellation waiver request Explain standard cancellation terms Yes
+GST invoice request Collect company name, GSTIN and billing address No, unless correction needed
+International card declined Suggest bank contact or another approved method If repeated
+Split billing request Record requested allocation before checkout Front Office assistance
+Security-deposit dispute Collect invoice and deduction details Yes
+OTA payment dispute Identify who collected payment May require platform contact
+Expired payment link Recheck rate and availability before reissue Yes
+Missed group-payment
+milestone Explain contract consequences Yes
+Card fails during checkout Request another approved payment method Front Office
+Unrecognised room charge Collect invoice line and supporting details Yes
+Bank transfer under
+verification Keep booking tentative until confirmed Yes
+29. Payment Information Collection Rules
+May collect:
+Guest name
+Booking reference
+Registered phone and email
+Transaction ID
+Payment date
+Amount
+Payment method
+Last four card digits only when necessary and permitted
+Redacted screenshot
+Must never collect:
+OTP
+PIN
+CVV
+Complete card number
+Banking password
+UPI PIN
+Bank login credentials
+30. Related Documents
+Guest Policies.pdf
+Offers and Packages.pdf
+Events, Weddings and Meetings.pdf
+Airport Transfer Information.docx
+
+--- Page 12 ---
+Restaurant Menu.pdf
+Spa and Activities.pdf
+Room Catalogue.pdf
+Expiry date: Review-based; replace immediately when approved payment rules change.

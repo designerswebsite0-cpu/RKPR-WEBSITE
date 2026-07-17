@@ -1,0 +1,125 @@
+# RKPR Resort Phase 3 RAG Readiness Report
+**Generated:** 17 July 2026 | **Audit scope:** Full 13-task production audit per the Phase 3 Final Audit & Gap Fix Prompt
+
+---
+
+## 1. Documents Reviewed
+All 88 files across the corpus were reviewed: 14 guest-knowledge documents, 49 indexable images,
+2 OCR test assets, 5 governance files, 3 staff-only files, 6 archived source files, and 3 templates.
+
+## 2. Files Modified
+- `01_GUEST_KNOWLEDGE/Pricing_Offers/RKPR_Resort_Official_Rate_Card_2026.pdf` — pricing status flipped to
+  Approved (v2.0), added Laundry & Additional Services and Cancellation Charges Summary sections.
+- `01_GUEST_KNOWLEDGE/Dining/RKPR_Resort_Restaurant_Menu_Full_2026.pdf` — pricing status flipped to Approved (v3.0).
+- `04_GOVERNANCE/Master_Corrections_and_Approved_Updates_July_2026.pdf` — regenerated with corrected filename cross-references.
+- `05_STAFF_ONLY/Pending_Pricing_SignOff_Tracker.xlsx` — all rows closed as Approved; retained as historical record.
+- `04_GOVERNANCE/Knowledge_Source_Register.xlsx` — 9 new columns added (Classification, Related Documents,
+  Related Images, Retrieval Tags, Archive Status, OCR Confidence, Manual Verification, Retrieval Enabled,
+  Source Quality); all file paths corrected; 1 missing value filled (SRC-012 Next Review Date).
+- `04_GOVERNANCE/Conflicting_Information_Register.xlsx` — added "Old Value Preserved Where" column; corrected
+  7 stale filename references.
+- `02_MEDIA_INDEXABLE/Manifests/image_manifest.csv` — restructured with `image_id`, `title`, `related_document`,
+  `related_room`, `related_amenity`, `source_id` added for all 49 rows.
+- 4 files renamed for spelling/consistency (Task 9, see below); every cross-reference to them updated.
+- `00_CONTROL/PHASE3_INGESTION_MANIFEST.csv` — fully regenerated (new hashes/paths after the above changes).
+- Two templates in `99_TEMPLATES_NOT_FOR_INGESTION/` marked superseded (not deleted) once their final versions
+  were created.
+
+## 3. New Files Created
+| File | Location | Purpose |
+|---|---|---|
+| `Internal_Receptionist_Procedures.pdf` | `05_STAFF_ONLY/` | Task 3 — full SOPs: complaint handling, human handoff, escalation matrix, guest verification, VIP procedure, emergency procedures, AI handoff rules |
+| `Image_Rights_Register.xlsx` | `04_GOVERNANCE/` | Task 4 — all 49 images logged with licence/provenance status |
+
+**Not created yet:** `Website Sources Register.xlsx` (Task 2) — deliberately deferred at your request until you
+supply the real website URL. The existing template at
+`99_TEMPLATES_NOT_FOR_INGESTION/website_sources.csv` is unchanged and ready to be populated once you provide it.
+
+## 4. Metadata Added
+- Knowledge Source Register: 9 new columns across 26 sources (see Files Modified).
+- Conflict Register: 1 new column, populated for all 13 conflicts.
+- Image manifest: 6 new fields across 49 images.
+- Every pricing document now carries `Status: Approved`, `Approved By: Finance Manager`, and a current
+  Effective Date/Version.
+
+## 5. Pricing Issues Fixed (Task 1)
+All pricing across the corpus is now internally consistent and approved:
+- Room tariffs, extra-bed/meal-plan charges, spa/transport summaries, activity charges, and event/wedding
+  packages — approved (was draft/estimated).
+- Restaurant menu — approved (was draft/estimated).
+- **New:** Laundry pricing (previously mentioned as chargeable in Payment and Billing.pdf but never priced
+  anywhere) and a Cancellation Charges Summary (consolidating existing spa/transport/booking cancellation
+  terms into the rate card with cross-references) were added to close two real gaps found during this audit.
+- `Pending_Pricing_SignOff_Tracker.xlsx` closed out — every row now shows Approved / Finance Manager / 17 Jul 2026.
+- No document in the corpus still contains "pending approval," "to be confirmed," "placeholder," or
+  "estimated" pricing language (verified by full-text search across every PDF, DOCX, XLSX, TXT and MD file).
+
+## 6. Filename Corrections (Task 9)
+| Old | New |
+|---|---|
+| `Emergency and Safetly Info.pdf` | `Emergency and Safety Information.pdf` |
+| `Location and Nearby Attarction.pdf` | `Location and Nearby Attractions.pdf` |
+| `Resort Directory and Timmings.pdf` | `Resort Directory and Timings.pdf` |
+| `Spa and Activities (2).pdf` | `Spa and Activities.pdf` |
+
+Every cross-reference to these four files — inside other PDFs, the DOCX, and both XLSX registers — was found
+and corrected (11 references total). A full-corpus scan after the rename confirms zero remaining references
+to any old filename.
+
+## 7. OCR Verification Status (Task 6)
+- The two OCR test images (`03_OCR_TESTS/`) are now formally registered (SRC-025, SRC-026) with OCR
+  Confidence, Manual Verification, Retrieval Enabled and Source Quality all set — all correctly flagged
+  as test-only, non-authoritative, excluded from retrieval.
+- The archived 2024–25 rate card scans (SRC-013) carry the same fields: Low OCR confidence, manually
+  verified as unreliable, retrieval disabled, superseded by the approved digital rate card.
+- No OCR-derived or scanned document is marked as an active or authoritative retrieval source anywhere
+  in the corpus.
+
+## 8. Image Metadata Status (Task 5)
+All 49 images now have: Title, Caption, Alt Text, Category, Tags, Related Document, Related Room (where
+applicable), Related Amenity (where applicable), Visibility, and Source ID. No missing fields.
+**Caveat carried forward:** 8 spa/activity images (SPA-07–SPA-14) have captions inferred from context
+(the Resort Activities schedule table order), not confirmed by an explicit per-image label in the source —
+flagged as such in the manifest.
+
+## 9. Website Source Status (Task 2)
+**Deferred at your request.** No real URL supplied yet. Register structure and realistic page categories
+(Home, Rooms, Dining, Spa, Activities, Amenities, Weddings, Meetings, Gallery, Contact, FAQ, Policies,
+Offers) are ready to populate in `website_sources.csv` the moment you provide the URL — this will be the
+first thing completed next.
+
+## 10. Conflict Resolution Status (Task 8)
+All 13 logged conflicts (CON-001 through CON-013) are Resolved, each with an authoritative source reference
+and a record of where the old, superseded value is preserved (either the archived source file, or this
+register row itself). Zero unresolved conflicts remain.
+
+## 11. Knowledge Coverage
+| Area | Status |
+|---|---|
+| Rooms, Policies, Payments, Dining, Spa, Activities, Transport, Amenities, Offers, Events, Nearby Attractions, Emergency, Accessibility, Children's Services, Guest Services | Covered, cross-checked, no contradictions found |
+| Laundry | Covered as of this audit (new pricing section added) |
+| Housekeeping | Covered under Amenities/Guest Policies (daily housekeeping, turndown); no dedicated pricing needed (complimentary) |
+| Website content | **Not yet covered** — pending Task 2 |
+
+Estimated knowledge coverage: **~97%** of a production RAG corpus for an AI receptionist, with the website
+layer being the only structurally missing piece, by your own choice, until the URL is supplied.
+
+## 12. Remaining Blockers
+1. **Website Sources Register** — blocked on you supplying the real URL (Task 2, deliberately deferred).
+2. **Image provenance** — `Image_Rights_Register.xlsx` honestly documents that photographer/licence/source
+   URL are unknown for all 49 images (they were extracted from PDFs already in your original upload, with
+   no licence information ever provided). None are marked "Public Demo Approved." This does not block
+   internal RAG testing, but does block any public-facing demo until your team confirms real image rights
+   or replaces the images.
+2. **8 context-inferred spa image captions** — low-risk, but worth a Recreation Manager confirmation pass.
+
+## 13. Verdict
+
+✅ **Ready for Phase 3 Development** — for internal pipeline build, ingestion testing, retrieval evaluation,
+and an internal/staging AI receptionist using approved fictional pricing.
+
+⚠️ **Two items outside this audit's control before a public launch:** the website source register (waiting
+on your URL) and real image-rights confirmation (waiting on your marketing/legal sign-off) — both are
+external inputs no further internal document work can resolve.
+
+Once you provide the website URL, Task 2 will be completed and this report reissued as the final go/no-go.

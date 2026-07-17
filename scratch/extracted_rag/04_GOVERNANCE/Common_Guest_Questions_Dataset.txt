@@ -1,0 +1,53 @@
+--- Sheet: Guest Questions ---
+Question | Expected Answer | Correct Source | Category | Guest/Internal | Priority
+What time is check-in? | 2:00 PM | Guest Policies.pdf | Policies | Guest | High
+What time is check-out? | 11:00 AM | Guest Policies.pdf | Policies | Guest | High
+Is early check-in available? | Yes, subject to availability and applicable charges. | Guest Policies.pdf | Policies | Guest | High
+Is late check-out possible? | Yes, subject to availability and applicable charges. | Guest Policies.pdf | Policies | Guest | High
+Which rooms have private pools? | Pool Villa and Presidential Villa. | Room Catalogue.pdf | Rooms | Guest | High
+Which room is best for a family of four? | Family Suite and Pool Villa. | Room Catalogue.pdf | Rooms | Guest | High
+Do all rooms include breakfast? | Most room plans include breakfast; verify your booking. | Room Catalogue.pdf | Rooms | Guest | High
+Do you have wheelchair-accessible rooms? | Yes, selected Garden Deluxe Rooms. | Room Catalogue.pdf | Accessibility | Guest | High
+Do you have mountain-view rooms? | Yes, Panorama Suites and selected Villas. | Room Catalogue.pdf | Rooms | Guest | Medium
+Is airport pickup available? | Yes, with advance booking. | Airport Transfer Information.docx | Transport | Guest | High
+Which airport is closest? | Kempegowda International Airport, Bengaluru. | Airport Transfer Information.docx | Transport | Guest | High
+Can six people travel together? | Yes, in a Luxury MUV. | Airport Transfer Information.docx | Transport | Guest | Medium
+What happens if my flight is delayed? | Inform the Transport Desk; the driver monitors flight updates. | Airport Transfer Information.docx | Transport | Guest | High
+What time does breakfast end? | 10:30 AM. | Restaurant Menu.pdf | Dining | Guest | High
+Do you serve Jain food? | Yes. | Restaurant Menu.pdf | Dining | Guest | High
+Do you have vegan options? | Yes. | Restaurant Menu.pdf | Dining | Guest | Medium
+Is room service available 24 hours? | Yes. | Restaurant Menu.pdf | Dining | Guest | High
+Can I reserve a table? | Yes, advance reservations are recommended. | Restaurant Menu.pdf | Dining | Guest | Medium
+Is the spa open in the evening? | Yes, until 9:00 PM. | Spa and Activities.pdf | Spa | Guest | High
+How much is a couple massage? | Starts from INR 9,500. | Spa and Activities.pdf | Spa | Guest | Medium
+Do I need to book yoga? | Yes, advance booking is recommended. | Spa and Activities.pdf | Activities | Guest | Medium
+Is the nature walk free? | Yes, for resident guests. | Spa and Activities.pdf | Activities | Guest | Medium
+Will the bonfire happen if it rains? | It may be cancelled or moved indoors. | Spa and Activities.pdf | Activities | Guest | Medium
+What time does the gym open? | 6:00 AM. | Amenities and Facilities.pdf | Amenities | Guest | Medium
+Is Wi-Fi complimentary? | Yes, throughout the resort. | Amenities and Facilities.pdf | Amenities | Guest | High
+Do you have EV charging? | Yes, reservation recommended. | Amenities and Facilities.pdf | Amenities | Guest | Medium
+Are pets allowed? | Only certified service animals. | Guest Policies.pdf | Policies | Guest | High
+Can visitors enter the resort? | Yes, after registration with valid ID. | Guest Policies.pdf | Policies | Guest | Medium
+Is smoking allowed inside rooms? | No. | Guest Policies.pdf | Policies | Guest | High
+What is the cancellation policy? | Depends on rate plan; see booking confirmation. | Guest Policies.pdf | Policies | Guest | High
+What facilities are open 24 hours? | Front Office, Concierge and Room Service. | Resort Directory and Timings.pdf | Directory | Guest | Medium
+When does the pool close? | 9:00 PM. | Resort Directory and Timings.pdf | Directory | Guest | Medium
+What offers are available? | Seasonal stay, honeymoon, family and wellness packages. | Offers and Packages.pdf | Offers | Guest | Medium
+Do honeymoon packages include decorations? | Yes, selected packages include room décor. | Offers and Packages.pdf | Offers | Guest | Medium
+Can you host weddings? | Yes, with banquet and lawn venues. | Events, Weddings and Meetings.pdf | Events | Guest | Medium
+Is outside catering allowed? | Only approved vendors or resort policy. | Events, Weddings and Meetings.pdf | Events | Guest | Low
+Where is the assembly point during an emergency? | Follow staff directions to the designated assembly area. | Emergency and Safety Information.pdf | Safety | Guest | High
+How do I request medical assistance? | Contact the Front Office immediately. | Emergency and Safety Information.pdf | Safety | Guest | High
+Which attraction is closest? | See Location and Nearby Attractions.pdf. | Location and Nearby Attractions.pdf | Attractions | Guest | Medium
+What is the best season to visit nearby attractions? | October to March. | Location and Nearby Attractions.pdf | Attractions | Guest | Low
+Can children use the swimming pool? | Yes, with adult supervision. | Amenities and Facilities.pdf | Children | Guest | Medium
+Do you have a Kids' Club? | Yes, 9:00 AM–7:00 PM. | Amenities and Facilities.pdf | Children | Guest | Medium
+Can I charge my EV overnight? | Yes, subject to charger availability. | Amenities and Facilities.pdf | Amenities | Guest | Low
+Do you have laundry service? | Yes, paid laundry and dry cleaning are available. | Amenities and Facilities.pdf | Amenities | Guest | Medium
+What payment methods are accepted? | Cards, UPI, bank transfer and cash within legal limits. | Resort FAQ.txt | Payments | Guest | Medium
+Can I extend my stay? | Yes, subject to room availability. | Resort FAQ.txt | Bookings | Guest | Medium
+Do you provide parking? | Yes, complimentary for resident guests. | Amenities and Facilities.pdf | Amenities | Guest | Medium
+Where is the business centre? | Business Wing beside the lobby. | Amenities and Facilities.pdf | Business | Guest | Low
+Is there a prayer room? | Yes, in the Central Wing. | Amenities and Facilities.pdf | Amenities | Guest | Low
+How can I contact the concierge? | Dial the concierge extension from your room phone. | Resort Directory and Timings.pdf | Directory | Guest | Medium
+

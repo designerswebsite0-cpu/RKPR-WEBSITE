@@ -1,0 +1,102 @@
+--- Page 1 ---
+RKPR RESORT
+ GUEST POLICIES
+Category
+Policies
+Visibility
+Guest-visible
+Source priority
+Critical
+Version
+1.0
+Effective date
+17 July 2026
+Last updated
+17 July 2026
+Content owner
+Front Office Manager
+Approved by
+General Manager
+Audit note
+Knowledge_Source_Register.xlsx has referenced a 'Guest Policies.pdf' (SRC-002) as
+a Critical, Approved source since before this review, but no such file existed in the
+document set - the facts it should own were scattered across Resort_FAQ.txt and the
+Room Catalogue with no dedicated, citable source. This document fills that gap,
+consolidating only facts already stated elsewhere in this corpus.
+1. Check-In and Check-Out
+Policy
+Detail
+Standard check-in
+2:00 PM
+Standard check-out
+11:00 AM
+Early check-in
+Subject to availability; charges may apply for arrivals before 10:00 AM
+Late check-out
+Subject to availability; additional charges may apply
+Stay extension
+Subject to room availability and prevailing rates
+2. Children and Occupancy
+Policy
+Detail
+Age bands
+Infant: 0-5 years | Child: 6-11 years | Adult: 12 years and above
+Infant (0-5)
+May share existing bedding at no additional charge in eligible categories
+Child (6-11)
+May use a rollaway bed at the applicable charge in extra-bed-eligible
+categories only
+Occupancy limits
+Maximum occupancy per category is strict and includes adults and children
+- see RKPR_Resort_Room_Catalogue.pdf for category-by-category limits
+Child breakfast
+Children aged 0-5 are complimentary; see meal plan charges in the Official
+Rate Card
+3. Pets, Smoking and Visitors
+Policy
+Detail
+Pets
+Not permitted, except certified service animals
+Smoking
+Prohibited inside all rooms, villas, balconies, patios and decks. Designated
+outdoor smoking areas are available
+
+
+--- Page 2 ---
+Policy
+Detail
+Visitors
+Must register with valid photo ID and follow resort visitor policies
+4. Parking and Accessibility
+Policy
+Detail
+Parking
+Complimentary for registered resident guests
+Wheelchair-accessible rooms
+Four designated Garden Deluxe Rooms; step-free access, wider doors,
+grab bars, lowered controls, roll-in shower. Must be requested and
+confirmed in advance - see RKPR_Resort_Room_Catalogue.pdf Section
+5.1
+5. Deposits and Identification
+Policy
+Detail
+Security deposit
+A refundable deposit may be collected at check-in depending on
+accommodation category (from INR 5,000 for selected premium villas) -
+see Payment and Billing.pdf Section 8
+Guest ID
+Valid government-issued photo identification is required for all registered
+guests at check-in, per standard hospitality registration requirements
+6. Frequently Asked Questions
+Q: Is early check-in available?
+A: Yes, subject to room availability. Charges may apply for arrivals before 10:00 AM.
+Q: Is late check-out available?
+A: Yes, subject to availability and may incur additional charges.
+Q: Are pets allowed?
+A: No, except certified service animals.
+Q: Is smoking allowed?
+A: Smoking is prohibited inside all rooms and villas. Designated outdoor smoking areas are available.
+Q: Do you have wheelchair-accessible rooms?
+A: Yes - four designated Garden Deluxe Rooms, request in advance.
+Q: Is there a security deposit?
+A: Yes, a refundable deposit may be collected at check-in depending on accommodation category.

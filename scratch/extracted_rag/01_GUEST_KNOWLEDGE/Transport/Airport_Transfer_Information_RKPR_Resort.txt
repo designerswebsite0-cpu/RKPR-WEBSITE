@@ -1,0 +1,201 @@
+RKPR RESORT
+AIRPORT TRANSFER INFORMATION
+1. Primary Airport Information
+2. Vehicle Options and Pricing
+3. Passenger and Luggage Rules
+4. Booking Process
+5. Airport Pickup Procedure
+6. Flight Delay and Waiting Charges
+7. Cancellation and No-show Policy
+8. Departure Transfers
+9. Railway Station Transfers
+10. Bus Station Transfers
+11. Local Transportation
+12. Self-drive Information
+13. Luxury and Helicopter Transfers
+14. Guest-visible and Internal Fields
+15. Frequently Asked Questions
+16. Optional Image Reference Links
+These links open royalty-free image collections for optional transport visuals. They are references only and are not presented as actual RKPR Resort vehicles or locations.
+RKPR Resort - Airport Transfer Information
+
+--- Table 1 ---
+Field | Details
+Price validity date | 1 January 2026 to 31 December 2026
+Last updated | 16 July 2026
+Transport contact | RKPR Resort Transport Desk: +91 90080 24024
+Booking channel | Reservations desk, concierge, front office or written guest request
+Price basis | Per vehicle, per transfer, in Indian Rupees
+Taxes | Prices include applicable GST unless otherwise stated
+
+--- Table 2 ---
+Field | Details
+Nearest airport | Kempegowda International Airport, Bengaluru (BLR)
+Approximate road distance | 190 km from RKPR Resort
+Typical travel time | 4 hours 15 minutes to 5 hours 30 minutes, depending on traffic, road works, weather and rest stops
+Recommended booking deadline | At least 24 hours before pickup; 48 hours recommended for premium vehicles, groups and late-night arrivals
+Transfer availability | 24 hours, subject to prior confirmation
+Pickup service | Available for arrivals and departures
+Route note | Travel time may increase during Bengaluru peak traffic, holiday weekends and monsoon conditions
+
+--- Table 3 ---
+Code | Vehicle | Transfer Type | Max Guests | Luggage | One Way | Round Trip | Night Charge
+SED-01 | Premium Sedan | Airport / station | 3 | 2 large + 2 cabin | INR 8,500 | INR 16,000 | INR 1,000
+SUV-01 | Premium SUV | Airport / station | 5 | 4 large + 3 cabin | INR 11,500 | INR 21,500 | INR 1,250
+MUV-01 | Luxury MUV | Airport / station | 6 | 5 large + 4 cabin | INR 13,500 | INR 25,000 | INR 1,500
+VAN-01 | Tempo Traveller | Group transfer | 12 | 10 large + 8 cabin | INR 21,000 | INR 39,000 | INR 2,500
+LUX-01 | Luxury Sedan | Premium transfer | 3 | 2 large + 2 cabin | INR 22,000 | INR 41,000 | INR 3,000
+LUX-02 | Luxury SUV | Premium transfer | 4 | 4 large + 2 cabin | INR 29,000 | INR 54,000 | INR 4,000
+
+--- Table 4 ---
+Field | Details
+One-way fare | Includes vehicle, driver, fuel, tolls, airport parking for the standard pickup window and one comfort stop
+Round-trip fare | Applies when both journeys are booked together. It does not include vehicle retention during the stay
+Night transfer period | Pickup or drop scheduled between 11:00 PM and 5:00 AM
+Additional night charge | Added once per affected transfer according to vehicle category
+Excess luggage | A larger vehicle or additional luggage vehicle may be required and charged separately
+Child seat | Available for selected vehicles at INR 750 per seat, subject to advance request
+Wheelchair storage | Foldable wheelchair accepted in SUVs, MUVs and vans when luggage capacity permits
+
+--- Table 5 ---
+Field | Details
+Capacity rule | Maximum passenger counts include adults and children. Infants count as passengers for seating and safety planning
+Sedan suitability | Suitable for up to three guests with moderate luggage. Not recommended for three guests carrying large international suitcases
+Six-person request | Six guests may travel in one Luxury MUV if luggage remains within five large and four cabin bags. Otherwise a Tempo Traveller or second vehicle is required
+Oversized items | Golf bags, surfboards, bicycles, equipment cases and mobility devices must be declared before confirmation
+Roof carriers | Not provided unless specifically confirmed
+Unaccompanied minors | Transfers for unaccompanied minors require advance management approval and guardian documentation
+Seat belts | Seat belts must be used where fitted. Guests may not exceed the registered seating capacity
+
+--- Table 6 ---
+Field | Details
+Required guest details | Lead guest name, booking confirmation number, mobile number, number of passengers, luggage count, pickup location, destination and preferred vehicle
+Flight details | Airline, flight number, arrival or departure date, scheduled time and terminal
+Booking deadline | 24 hours before pickup for standard vehicles; 48 hours for luxury vehicles and groups; 72 hours for helicopters
+Confirmation | A transfer is confirmed only after the resort issues a written confirmation with vehicle category, pickup time and price
+Driver assignment | Driver name, mobile number and vehicle registration are normally shared 6-12 hours before pickup
+Last-minute requests | Requests made within 6 hours are handled subject to vehicle availability and may attract a priority arrangement fee
+Guest-visible contact | RKPR Resort Transport Desk: +91 90080 24024
+Internal vendor name | Managed by an approved external transport partner (see internal operations appendix - staff only)
+
+--- Table 7 ---
+Field | Details
+Domestic arrivals meeting point | Outside the arrivals exit near the designated app-cab and hotel pickup zone; exact pillar or gate number is shared with the driver details
+International arrivals meeting point | Outside the customs exit in the public arrivals hall near the hotel representative area
+Pickup sign | Driver carries a white RKPR Resort placard showing the lead guest's surname unless privacy instructions request otherwise
+Contact procedure | Guest should call the driver or Transport Desk after collecting baggage
+Standard waiting allowance | 60 minutes from actual flight landing time for domestic arrivals and 90 minutes for international arrivals
+Airport assistance | Porter and meet-and-assist services are not included unless separately arranged
+Missed contact | If the guest and driver cannot locate each other, the Transport Desk coordinates by phone and messaging
+
+--- Table 8 ---
+Field | Details
+Tracked flight delay | When a valid flight number is provided, the driver monitors the flight and adjusts pickup to the revised arrival time
+No charge for flight delay | No waiting charge applies during the included waiting allowance when the delay is reflected in official flight tracking
+Delayed baggage or immigration | The guest should notify the driver. Waiting beyond the included allowance is charged at INR 600 per hour for sedan/SUV/MUV, INR 900 per hour for van and INR 1,500 per hour for luxury vehicles
+Flight diversion or cancellation | The transfer is held or rescheduled where practical. Additional vehicle deployment costs may apply
+Incorrect flight information | Waiting and rescheduling charges may apply when the flight number, terminal or arrival date supplied by the guest is incorrect
+No communication | If the guest cannot be contacted for 120 minutes after actual landing, the transfer may be treated as a no-show
+
+--- Table 9 ---
+Field | Details
+More than 24 hours before pickup | No cancellation charge for standard vehicles
+12-24 hours before pickup | 50% of the confirmed one-way transfer price
+Less than 12 hours before pickup | 100% of the confirmed transfer price
+Luxury vehicles | Free cancellation until 48 hours before pickup; 50% charge from 24-48 hours; 100% within 24 hours
+Group vehicles | Free cancellation until 48 hours before pickup; 100% within 24 hours
+No-show | 100% charge when the guest does not appear or cannot be contacted within the stated waiting period
+Flight cancellation | Waiver or rescheduling may be considered when official airline proof is provided before driver dispatch
+Refund timeline | Approved refunds are initiated within 7 business days to the original payment method
+
+--- Table 10 ---
+Field | Details
+Recommended pickup time | At least 7 hours before a domestic flight and 8 hours before an international flight
+Traffic buffer | Additional time may be recommended on weekends, public holidays and during heavy rain
+Pickup location | Main resort lobby unless a villa pickup is confirmed
+Late guest | The driver waits up to 15 minutes after the confirmed resort pickup time. Further waiting may be charged
+Missed flight | The resort and transport vendor are not responsible for missed flights caused by a guest's late departure or insufficient travel buffer selected against advice
+
+--- Table 11 ---
+Field | Details
+Primary railway station | Mysuru Junction Railway Station
+Approximate distance | 95 km
+Typical travel time | 2 hours 15 minutes to 3 hours
+Premium Sedan one way | INR 5,500
+Premium SUV one way | INR 7,500
+Luxury MUV one way | INR 8,500
+Tempo Traveller one way | INR 13,500
+Night charge | INR 750-1,500 depending on vehicle category
+Meeting point | Main station exit near the prepaid taxi area; driver details and exit information are shared before arrival
+Waiting allowance | 45 minutes from scheduled train arrival; delayed trains are monitored when a valid train number is provided
+
+--- Table 12 ---
+Field | Details
+Primary bus station | Mysuru Suburban Bus Station
+Approximate distance | 93 km
+Typical travel time | 2 hours 15 minutes to 3 hours
+Premium Sedan one way | INR 5,300
+Premium SUV one way | INR 7,300
+Luxury MUV one way | INR 8,300
+Tempo Traveller one way | INR 13,200
+Pickup point | Main passenger exit or operator-designated boarding bay, confirmed on the day of travel
+Booking requirement | At least 12 hours in advance
+
+--- Table 13 ---
+Field | Details
+Local taxi availability | Resort-arranged taxis are available for sightseeing, restaurant visits and nearby transfers
+Minimum local hire | Four-hour or eight-hour packages depending on destination
+Four-hour sedan package | INR 3,200 for up to 40 km; extra kilometre INR 24
+Eight-hour sedan package | INR 5,500 for up to 80 km; extra kilometre INR 24
+Four-hour SUV package | INR 4,200 for up to 40 km; extra kilometre INR 31
+Eight-hour SUV package | INR 7,200 for up to 80 km; extra kilometre INR 31
+Driver allowance | Included for local daytime use; outstation night allowance may apply
+App-based taxis | Availability near the resort is unreliable and pickup times cannot be guaranteed
+Street taxis | Guests are advised to use resort-arranged or licensed services
+
+--- Table 14 ---
+Field | Details
+Self-drive vehicles | The resort does not directly rent self-drive cars
+Third-party rentals | Guests may arrange licensed self-drive rentals independently
+Parking | Complimentary parking is available for registered resident guests
+Documents | Valid driving licence, registration, insurance and pollution-control documents may be required
+Electric vehicles | Limited charging points are available by advance request; charging speed and connector compatibility are not guaranteed
+Driver accommodation | Accommodation for privately hired drivers is limited and chargeable, subject to availability
+
+--- Table 15 ---
+Field | Details
+Chauffeured luxury transfer | Luxury sedan and luxury SUV options are available with 48-hour advance booking
+Luxury inclusions | Uniformed chauffeur, bottled water, Wi-Fi where available and one comfort stop
+Helicopter transfer | Charter helicopter transfer may be arranged from Bengaluru subject to operator availability, daylight, weather, aviation approvals and landing clearance
+Indicative helicopter price | From INR 3,50,000 one way for up to 5 guests; final quotation depends on aircraft, permits and positioning
+Helicopter booking deadline | Minimum 72 hours; 7 days recommended
+Baggage limit | Typically 10-15 kg per guest depending on aircraft
+Cancellation | Operator-specific terms apply and may be fully non-refundable after confirmation
+Weather dependency | Flights may be delayed, rerouted or cancelled for safety. Road transfer can be arranged at additional cost
+
+--- Table 16 ---
+Field | Details
+Guest-visible | Airport name, distance, travel time, vehicle type, capacity, luggage allowance, prices, night charges, waiting charges, booking deadline, cancellation rules, pickup instructions, driver contact and delay procedure
+Internal only | Vendor legal name, driver payout, vendor commission, dispatch notes, backup-driver details, internal incident notes and negotiated supplier rates
+Vehicle code | May be stored internally and shown on confirmed transfer vouchers
+Transfer type | Airport arrival, airport departure, railway arrival, railway departure, bus station, local hire, luxury transfer or helicopter charter
+Contact number | Guest-visible Transport Desk number: +91 90080 24024
+Vendor name | Managed by an approved external transport partner (see internal operations appendix - staff only)
+
+--- Table 17 ---
+Question | Answer
+Can the resort arrange airport pickup? | Yes. Airport pickup is available 24 hours with advance confirmation.
+How much does airport transfer cost? | A one-way transfer from Bengaluru Airport starts at INR 8,500 for a Premium Sedan. Prices vary by vehicle.
+Which airport is closest? | Kempegowda International Airport, Bengaluru is the nearest major airport, approximately 190 km away.
+Can six people travel in one vehicle? | Yes, in a Luxury MUV if luggage fits within the stated allowance. With heavy luggage, a Tempo Traveller is recommended.
+What happens if my flight is delayed? | The driver tracks the flight using the supplied flight number and adjusts the pickup time. Standard waiting allowances apply after actual landing.
+Can I arrange a pickup at midnight? | Yes. Midnight pickup is available, but the applicable night charge is added.
+
+--- Table 18 ---
+Asset | Caption | Alt text | Tags | Clickable link
+Premium sedan | Luxury sedan suitable for airport transfers. | Black luxury sedan parked outside a hotel. | premium sedan, airport transfer, chauffeur | Open link
+Premium SUV | Large SUV suitable for families and luggage. | Luxury SUV used for a resort transfer. | premium SUV, family transfer, luggage | Open link
+Tempo Traveller | Passenger van suitable for groups. | Large passenger van for group transfer. | group vehicle, passenger van, airport transfer | Open link
+Airport meeting point | Airport arrivals hall or pickup zone. | Airport arrivals pickup and meeting area. | airport meeting point, arrivals, pickup zone | Open link
+Pickup sign example | Hotel pickup placard displaying a guest surname. | Driver holding a hotel guest pickup sign. | pickup sign, chauffeur placard, airport greeting | Open link
+Route map | Road route from Bengaluru Airport to a hill resort. | Map showing an airport-to-resort road journey. | route map, airport road, resort transfer | Open link

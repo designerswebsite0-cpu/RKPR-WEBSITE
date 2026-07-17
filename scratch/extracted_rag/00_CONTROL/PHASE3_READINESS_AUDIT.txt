@@ -1,0 +1,53 @@
+# RKPR Resort Phase 3 RAG Readiness Audit
+
+> **Updated 17 July 2026:** Most blocking items below have been resolved. See
+> `00_CONTROL/PHASE3_FINAL_READINESS_REPORT.md` for the current, authoritative status.
+> This original audit is retained for historical reference.
+
+## Verdict
+**Ready to begin Phase 3 development and ingestion-pipeline testing, but not yet ready to label the knowledge corpus fully production-approved.**
+
+## Strong coverage already present
+- Guest policies, amenities, safety, location, timings and FAQ
+- Room catalogue
+- Full dining menu
+- Spa and activities
+- Events, weddings and meetings
+- Airport transfers
+- Offers, payment/billing and rate card
+- 49 indexable standalone images with captions/alt text/tags
+- Two OCR test images
+- 50-question retrieval benchmark
+- Conflict register, source register and approved-corrections source
+- Separate staff-only transport appendix
+
+## Blocking or incomplete items
+1. **Website ingestion input is missing.** No real or fictional resort website URL/sitemap list is supplied. A template is included under `99_TEMPLATES_NOT_FOR_INGESTION/website_sources.csv`.
+2. **Pricing approval is incomplete.** Room tariffs, some activity prices, event/package prices and restaurant prices are marked estimated/pending sign-off. They can be used for pipeline testing, but should not be presented as fully authoritative until approved.
+3. **Internal receptionist procedures are missing.** Only an internal transport appendix exists. A template is included for complaint, refund, emergency, maintenance and human-handoff workflows.
+4. **Image rights/provenance is incomplete.** The image manifest has captions and source-document references, but not licence/source URL/generator provenance. Complete `image_rights_register.csv` before a public demo.
+5. **Eight spa/activity image labels are context-inferred.** Confirm those labels before treating them as final visual truth.
+
+## Important ingestion rules
+- Index `01_GUEST_KNOWLEDGE` into the guest corpus.
+- Index `05_STAFF_ONLY` only into a physically/logically separate staff index with strict retrieval filters.
+- Treat `04_GOVERNANCE` as control-plane data; do not blindly chunk every spreadsheet row into guest search.
+- Use `Master_Corrections_and_Approved_Updates_July_2026.pdf` as a high-priority override source for the facts it covers.
+- Keep `03_OCR_TESTS` out of normal retrieval; use only for OCR and archive-behaviour tests.
+- Never index `90_ARCHIVE` into active retrieval.
+- Keep `99_TEMPLATES_NOT_FOR_INGESTION` excluded until completed.
+- Do not ingest the image-source PDFs as normal knowledge; standalone images plus `image_manifest.csv` are the usable media layer.
+
+## Recommended source priority
+1. Master approved corrections
+2. Current critical authoritative policies/rates/payment/menu documents
+3. Current category documents
+4. FAQ
+5. Website pages
+6. Supplementary image-source documents
+7. Archived documents — excluded
+
+## Phase 3 go/no-go
+- **Go:** schema, upload pipeline, OCR, parsing, chunking, embeddings, hybrid retrieval, dashboard, versioning and analytics.
+- **Conditional go for evaluation:** retrieval testing with current fictional pricing.
+- **No-go for “production-approved corpus” label:** until pricing sign-off, website-source decision, internal procedures and image provenance are completed.
