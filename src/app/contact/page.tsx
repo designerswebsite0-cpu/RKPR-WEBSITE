@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +10,30 @@ import { roomCategories } from "@/data/rooms";
 import { diningOutlets } from "@/data/dining";
 import { spaTreatments } from "@/data/spa";
 import { transferData } from "@/data/transfers";
-import { Phone, Mail, MapPin, ShieldAlert, CheckCircle, AlertCircle, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, ShieldAlert, CheckCircle, AlertCircle } from "lucide-react";
+
+interface EnquiryPayload {
+  fullName: string;
+  email: string;
+  phone: string;
+  enquiryType: string;
+  comments: string;
+  roomType?: string;
+  checkIn?: string;
+  checkOut?: string;
+  guests?: number;
+  outlet?: string;
+  guestsCount?: number;
+  preferredTime?: string;
+  treatment?: string;
+  vehicle?: string;
+  flightNumber?: string;
+}
+
+interface EnquiryReceipt {
+  referenceNumber: string;
+  message: string;
+}
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
@@ -19,48 +42,30 @@ function ContactFormContent() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [enquiryType, setEnquiryType] = useState("general");
-  const [roomType, setRoomType] = useState("");
+  const [enquiryType, setEnquiryType] = useState(() => searchParams.get("enquiryType") ?? "general");
+  const [roomType, setRoomType] = useState(() => searchParams.get("roomType") ?? "");
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(2);
-  const [outlet, setOutlet] = useState("");
+  const [outlet, setOutlet] = useState(() => searchParams.get("outlet") ?? "");
   const [guestsCount, setGuestsCount] = useState(2);
   const [preferredTime, setPreferredTime] = useState("");
-  const [treatment, setTreatment] = useState("");
-  const [vehicle, setVehicle] = useState("");
+  const [treatment, setTreatment] = useState(() => searchParams.get("treatment") ?? "");
+  const [vehicle, setVehicle] = useState(() => searchParams.get("vehicle") ?? "");
   const [flightNumber, setFlightNumber] = useState("");
   const [comments, setComments] = useState("");
 
   // UI States
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successReceipt, setSuccessReceipt] = useState<any>(null);
-
-  // Pre-fill fields from URL queries
-  useEffect(() => {
-    const type = searchParams.get("enquiryType");
-    if (type) setEnquiryType(type);
-
-    const room = searchParams.get("roomType");
-    if (room) setRoomType(room);
-
-    const rest = searchParams.get("outlet");
-    if (rest) setOutlet(rest);
-
-    const treat = searchParams.get("treatment");
-    if (treat) setTreatment(treat);
-
-    const veh = searchParams.get("vehicle");
-    if (veh) setVehicle(veh);
-  }, [searchParams]);
+  const [successReceipt, setSuccessReceipt] = useState<EnquiryReceipt | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
     setIsSubmitting(true);
 
-    const payload: any = {
+    const payload: EnquiryPayload = {
       fullName,
       email,
       phone,
@@ -97,7 +102,7 @@ function ContactFormContent() {
       } else {
         setSuccessReceipt(data);
       }
-    } catch (err) {
+    } catch {
       setErrors({ general: "Unable to connect to the server. Please try again." });
     } finally {
       setIsSubmitting(false);

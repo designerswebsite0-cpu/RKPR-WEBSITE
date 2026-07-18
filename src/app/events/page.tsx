@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { eventData } from "@/data/events";
-import { CalendarCheck, ShieldAlert, Award, Compass, Table, FileText, CheckCircle } from "lucide-react";
+import { ShieldAlert, Compass, Table, FileText, CheckCircle } from "lucide-react";
 
 export const metadata = {
   title: "Weddings, Events & Conferences",
@@ -179,7 +179,7 @@ export default function EventsPage() {
                   <div>
                     <h4 className="font-bold text-primary">Guest Parking & Logistics</h4>
                     <p className="mt-1 text-xs">
-                      Valet and self-parking are complimentary for all attendees. Specialized coach parking can be coordinated with 48 hours' notice to security teams.
+                      Valet and self-parking are complimentary for all attendees. Specialized coach parking can be coordinated with 48 hours&apos; notice to security teams.
                     </p>
                   </div>
                 </div>

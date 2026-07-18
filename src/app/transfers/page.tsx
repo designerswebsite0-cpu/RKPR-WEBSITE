@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { transferData } from "@/data/transfers";
-import { Car, Clock, ShieldAlert, BadgeInfo, CalendarCheck2, MapPin } from "lucide-react";
+import { ShieldAlert, BadgeInfo, MapPin } from "lucide-react";
 
 export const metadata = {
   title: "Airport Transfers & Local Travel",

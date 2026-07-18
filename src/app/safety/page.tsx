@@ -37,7 +37,7 @@ export default function SafetyPage() {
               <div>
                 <h4 className="font-serif text-lg font-bold text-red-950">Emergency Helpline</h4>
                 <p className="font-sans text-xs text-red-900 font-light mt-1">
-                  Connect instantly to the resort's 24-hour Emergency Response Desk or Security Officer.
+                  Connect instantly to the resort&apos;s 24-hour Emergency Response Desk or Security Officer.
                 </p>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function SafetyPage() {
               <ul className="list-disc list-inside space-y-2 text-xs font-sans text-charcoal/70">
                 <li><strong>First-Aid & Medical Room:</strong> Located on the ground floor next to the main lobby. Staffed with a qualified nurse during regular operational hours. Basic first-aid kits are available at all reception desks.</li>
                 <li><strong>On-Call Doctor:</strong> An on-call doctor from Chamarajanagar General Hospital can be summoned for room consultation. A standard consultation fee applies.</li>
-                <li><strong>Nearest Hospital:</strong> Chamarajanagar District Hospital is located 32 km from the resort (~45 minutes' drive). In the event of a critical emergency, our resort ambulance is on standby to transport patients.</li>
+                <li><strong>Nearest Hospital:</strong> Chamarajanagar District Hospital is located 32 km from the resort (~45 minutes&apos; drive). In the event of a critical emergency, our resort ambulance is on standby to transport patients.</li>
               </ul>
             </div>
 
@@ -88,7 +88,7 @@ export default function SafetyPage() {
                 <div>
                   <h4 className="font-bold text-primary text-sm">Lost Children:</h4>
                   <p className="mt-1">
-                    If a child is lost, immediately notify the Kids' Club Desk or the Front Desk. Security staff will initiate standard property search procedures and monitor exit gates.
+                    If a child is lost, immediately notify the Kids&apos; Club Desk or the Front Desk. Security staff will initiate standard property search procedures and monitor exit gates.
                   </p>
                 </div>
               </div>

@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { menuItems } from "@/data/menu";
 import { diningOutlets } from "@/data/dining";
-import { Search, ShieldAlert, ArrowLeft, Heart, Flame } from "lucide-react";
+import { Search, ShieldAlert } from "lucide-react";
 
 export default function DiningMenu() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -168,7 +167,6 @@ export default function DiningMenu() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => {
               const outletObj = diningOutlets.find((o) => o.id === item.outlet);
-              const isSpicy = item.tags.some(t => ["Spicy", "Medium"].includes(t));
               return (
                 <div
                   key={item.id}

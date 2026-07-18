@@ -2,8 +2,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
-import { Users, CheckCircle, Clock, Baby, HelpCircle } from "lucide-react";
-import { resortDetails } from "@/data/contact";
+import { Users, Clock, Baby } from "lucide-react";
 
 export const metadata = {
   title: "Families & Kids Services",
@@ -36,10 +35,10 @@ export default function FamiliesPage() {
             {/* Kids Club */}
             <div className="bg-white border border-sand rounded-sm p-6 card-shadow">
               <h3 className="font-serif text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                <Clock size={18} className="text-accent" /> Kids' Club & Creative Space
+                <Clock size={18} className="text-accent" /> Kids&apos; Club & Creative Space
               </h3>
               <p className="mb-4">
-                Our supervised Kids' Club is located in the Family Courtyard. It is open daily from <strong>9:00 AM to 7:00 PM</strong>, with last guest entry registered by <strong>6:30 PM</strong>.
+                Our supervised Kids&apos; Club is located in the Family Courtyard. It is open daily from <strong>9:00 AM to 7:00 PM</strong>, with last guest entry registered by <strong>6:30 PM</strong>.
               </p>
               <div className="bg-secondary/15 rounded-sm p-4 mb-4">
                 <h4 className="font-semibold text-primary mb-2 text-xs uppercase tracking-wider">Scheduled Activities & Costs:</h4>
@@ -66,7 +65,7 @@ export default function FamiliesPage() {
                 For family getaways, we recommend our specialized room categories:
               </p>
               <ul className="list-disc list-inside space-y-2 text-xs font-sans text-charcoal/70 mb-4">
-                <li><strong>Family Courtyard Suite (FCS):</strong> Offers 78 sq m of space. Features a semi-private kids' bunk area (two bunk beds), a main king bedroom for parents, and a private garden patio. Accommodates up to 4 adults or 2 adults + 3 children.</li>
+                <li><strong>Family Courtyard Suite (FCS):</strong> Offers 78 sq m of space. Features a semi-private kids&apos; bunk area (two bunk beds), a main king bedroom for parents, and a private garden patio. Accommodates up to 4 adults or 2 adults + 3 children.</li>
                 <li><strong>Connecting Rooms (GDR):</strong> We offer 4 connecting pairs in the Garden Deluxe category (1 King Room connected to 1 Twin Room), providing space and proximity.</li>
               </ul>
               <Link
@@ -81,11 +80,11 @@ export default function FamiliesPage() {
             {/* Pools & Babysitting */}
             <div className="bg-white border border-sand rounded-sm p-6 card-shadow">
               <h3 className="font-serif text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                <Baby size={18} className="text-accent" /> Kids' Pool & Babysitting Rules
+                <Baby size={18} className="text-accent" /> Kids&apos; Pool & Babysitting Rules
               </h3>
               <div className="space-y-4 text-xs font-sans text-charcoal/70">
                 <div>
-                  <h4 className="font-bold text-primary text-sm">Children's Pool:</h4>
+                  <h4 className="font-bold text-primary text-sm">Children&apos;s Pool:</h4>
                   <p className="mt-1">
                     Open daily from <strong>7:00 AM to 7:00 PM</strong>. Situated next to the main infinity pool, it has a depth of 0.45 meters. There are no dedicated lifeguards; children must be supervised by an adult at all times. Swimwear is required.
                   </p>
@@ -93,7 +92,7 @@ export default function FamiliesPage() {
                 <div>
                   <h4 className="font-bold text-primary text-sm">In-Room Babysitting:</h4>
                   <p className="mt-1">
-                    Babysitting can be arranged for in-house children aged 2+ years. Charges are INR 500 per hour, with a minimum commitment of 2 hours. Booking requires 6 hours' advance notice at the reception desk.
+                    Babysitting can be arranged for in-house children aged 2+ years. Charges are INR 500 per hour, with a minimum commitment of 2 hours. Booking requires 6 hours&apos; advance notice at the reception desk.
                   </p>
                 </div>
               </div>

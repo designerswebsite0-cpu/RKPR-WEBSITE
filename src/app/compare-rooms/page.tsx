@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { roomCategories } from "@/data/rooms";
-import { GitCompare, Waves, Sparkles, Check, X, ArrowRight, HelpCircle } from "lucide-react";
+import { GitCompare, Check, X, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Compare Rooms & Suites",

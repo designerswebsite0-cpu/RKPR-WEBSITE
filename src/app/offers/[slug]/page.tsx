@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { offers } from "@/data/offers";
-import { ArrowLeft, Check, X, Calendar, AlertTriangle, ShieldCheck, Mail } from "lucide-react";
+import { ArrowLeft, Check, X, AlertTriangle, ShieldCheck } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;

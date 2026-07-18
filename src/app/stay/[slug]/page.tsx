@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { roomCategories } from "@/data/rooms";
-import { ArrowLeft, Waves, Sparkles, Accessibility, Users, Calendar, MapPin, CheckCircle, ShieldAlert } from "lucide-react";
+import { ArrowLeft, Waves, Sparkles, Accessibility, Calendar, CheckCircle, ShieldAlert } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;

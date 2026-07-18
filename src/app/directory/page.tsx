@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { resortDirectory } from "@/data/directory";
-import { Clock, PhoneCall, AlertCircle, Compass } from "lucide-react";
+import { Clock, PhoneCall } from "lucide-react";
 import { resortDetails } from "@/data/contact";
 
 export const metadata = {

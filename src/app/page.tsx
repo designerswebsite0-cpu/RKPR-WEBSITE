@@ -6,9 +6,7 @@ import ChatWidget from "@/components/ChatWidget";
 import { roomCategories } from "@/data/rooms";
 import { diningOutlets } from "@/data/dining";
 import { offers } from "@/data/offers";
-import { activities } from "@/data/activities";
-import { resortDetails } from "@/data/contact";
-import { ArrowRight, Waves, ShieldCheck, Star, Users, MapPin, Calendar, Clock, ShieldAlert } from "lucide-react";
+import { ArrowRight, Waves, Star, MapPin, Clock, ShieldAlert } from "lucide-react";
 
 export default function Home() {
   // Select three featured rooms to showcase
@@ -337,9 +335,9 @@ export default function Home() {
               </p>
             </div>
             <div className="border border-sand rounded-sm p-5 bg-secondary/15">
-              <h4 className="font-serif text-base font-bold text-primary mb-2">Q: What are the timings for the Kids' Club and spa?</h4>
+              <h4 className="font-serif text-base font-bold text-primary mb-2">Q: What are the timings for the Kids&apos; Club and spa?</h4>
               <p className="font-sans text-sm text-charcoal/80 leading-relaxed font-light">
-                A: The Kids' Club is open daily from 9:00 AM to 7:00 PM (last entry at 6:30 PM). Aranya Wellness Spa is open from 9:00 AM to 9:00 PM on weekdays, and from 8:00 AM to 10:00 PM on weekends and public holidays.
+                A: The Kids&apos; Club is open daily from 9:00 AM to 7:00 PM (last entry at 6:30 PM). Aranya Wellness Spa is open from 9:00 AM to 9:00 PM on weekdays, and from 8:00 AM to 10:00 PM on weekends and public holidays.
               </p>
             </div>
             <div className="border border-sand rounded-sm p-5 bg-secondary/15">

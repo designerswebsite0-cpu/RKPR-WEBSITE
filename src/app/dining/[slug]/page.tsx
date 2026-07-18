@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { diningOutlets } from "@/data/dining";
 import { menuItems } from "@/data/menu";
-import { ArrowLeft, Clock, Star, CalendarCheck, UtensilsCrossed, ArrowRight } from "lucide-react";
+import { ArrowLeft, Clock, CalendarCheck, UtensilsCrossed, ArrowRight } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -112,7 +112,7 @@ export default async function DiningDetails({ params }: Props) {
               {/* Signature Dishes Preview */}
               {signatureItems.length > 0 && (
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-primary mb-4">Chef's Signature Selections</h3>
+                  <h3 className="font-serif text-xl font-bold text-primary mb-4">Chef&apos;s Signature Selections</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {signatureItems.map((item) => (
                       <div key={item.id} className="bg-white border border-sand rounded-sm p-4 card-shadow flex flex-col justify-between">

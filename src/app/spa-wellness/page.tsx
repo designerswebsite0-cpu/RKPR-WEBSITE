@@ -1,10 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { spaTreatments, coupleRituals, spaFacilities } from "@/data/spa";
-import { Sparkles, Clock, CalendarCheck, ShieldAlert, Heart, Info, Waves } from "lucide-react";
+import { Clock, CalendarCheck, ShieldAlert, Waves } from "lucide-react";
 
 export const metadata = {
   title: "Aranya Wellness Spa",
@@ -67,7 +66,7 @@ export default function SpaWellness() {
                   <CalendarCheck size={18} className="text-accent" /> Appointments
                 </h3>
                 <p className="font-sans text-xs text-charcoal/70 leading-relaxed mb-6 font-light">
-                  Treatments require prior reservations. We recommend booking at least 12 hours in advance. Standard cancellations require 6+ hours' notice.
+                  Treatments require prior reservations. We recommend booking at least 12 hours in advance. Standard cancellations require 6+ hours&apos; notice.
                 </p>
               </div>
               <Link

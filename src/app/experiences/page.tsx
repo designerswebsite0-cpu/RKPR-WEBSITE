@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { activities } from "@/data/activities";
-import { Search, Compass, Clock, MapPin, ShieldAlert, Award, Calendar, RefreshCw } from "lucide-react";
+import { Search, Compass, Clock, ShieldAlert, Award, Calendar } from "lucide-react";
 
 export default function Experiences() {
   const [searchQuery, setSearchQuery] = useState("");

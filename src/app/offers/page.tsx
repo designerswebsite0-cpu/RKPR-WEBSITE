@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { offers } from "@/data/offers";
-import { Calendar, Percent, CheckCircle2, AlertTriangle, ArrowRight } from "lucide-react";
+import { Calendar, CheckCircle2, AlertTriangle, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Special Offers & Holiday Packages",

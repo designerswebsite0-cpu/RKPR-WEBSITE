@@ -1,13 +1,8 @@
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { resortImages } from "@/data/media";
-import { roomCategories } from "@/data/rooms";
-import { diningOutlets } from "@/data/dining";
-import { spaTreatments } from "@/data/spa";
-import { transferData } from "@/data/transfers";
-import { ShieldCheck, CheckSquare, ListFilter, Image as ImageIcon, Database, HelpCircle, FileCheck } from "lucide-react";
+import { ShieldCheck, CheckSquare, Image as ImageIcon, Database } from "lucide-react";
 
 export const metadata = {
   title: "Content & Assets Audit Portal",
@@ -123,7 +118,7 @@ export default function ContentAudit() {
                   <div>
                     <strong>Spelling and Nomenclature Guidelines</strong>
                     <p className="text-xs text-charcoal/65 mt-0.5">
-                      Ensured correct usage of names: "Aranya Wellness Spa", "Azure Terrace", "Ember & Spice", "The Cedar Lounge", and "Summit Bar".
+                      Ensured correct usage of names: &quot;Aranya Wellness Spa&quot;, &quot;Azure Terrace&quot;, &quot;Ember & Spice&quot;, &quot;The Cedar Lounge&quot;, and &quot;Summit Bar&quot;.
                     </p>
                   </div>
                 </div>
@@ -144,7 +139,7 @@ export default function ContentAudit() {
                   <div>
                     <strong>Department operating hours matching</strong>
                     <p className="text-xs text-charcoal/65 mt-0.5">
-                      Ensured Spa (9 AM - 9 PM weekdays, 8 AM - 10 PM weekends), Kids' club (9 AM - 7 PM), and Pools are consistently presented across all pages.
+                      Ensured Spa (9 AM - 9 PM weekdays, 8 AM - 10 PM weekends), Kids&apos; club (9 AM - 7 PM), and Pools are consistently presented across all pages.
                     </p>
                   </div>
                 </div>

@@ -93,7 +93,7 @@ export default function FAQPage() {
 
           {/* FAQ Accordions */}
           <div className="space-y-4">
-            {filteredFaqs.map((faq, originalIndex) => {
+            {filteredFaqs.map((faq) => {
               // Find index in original array to keep states consistent
               const idx = faqItems.findIndex((f) => f.question === faq.question);
               const isOpen = openIndexes.includes(idx);

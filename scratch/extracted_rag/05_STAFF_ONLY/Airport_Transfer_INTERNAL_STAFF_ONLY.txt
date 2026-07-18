@@ -1,9 +1,0 @@
-RKPR Resort - Airport Transfer Internal Operations Appendix
-Visibility: STAFF-ONLY - DO NOT SHARE WITH GUESTS OR INCLUDE IN GUEST-FACING RETRIEVAL INDEXES.
-This appendix was split out of Airport_Transfer_Information_RKPR_Resort.docx on 17 July 2026 (consistency audit) because the guest-visible document embedded internal-only fields inline inside otherwise guest-visible tables, creating a risk that a guest-facing chatbot could surface them in an answer.
-Vendor Information
-Additional internal-only content referenced in the original document (vendor legal name, driver payout, vendor commission, dispatch notes, backup-driver details, internal incident notes and negotiated supplier rates - see Table 15 "Internal only" row) should be moved into this appendix in full at the next content revision. Only the vendor legal name was duplicated verbatim in the original tables and has been redacted there; the other items were already described only in general terms, not with specific values, in the guest-visible document.
-
---- Table 1 ---
-Field | Details
-Internal vendor legal name | HillRoute Mobility Services Pvt. Ltd.

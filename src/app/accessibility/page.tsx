@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
-import { Accessibility, CheckCircle, ShieldAlert, Phone } from "lucide-react";
+import { Accessibility, CheckCircle, Phone } from "lucide-react";
 import { resortDetails } from "@/data/contact";
 
 export const metadata = {

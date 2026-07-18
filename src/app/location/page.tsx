@@ -1,11 +1,9 @@
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { attractions, travelItineraries } from "@/data/attractions";
 import { resortDetails } from "@/data/contact";
-import { transferData } from "@/data/transfers";
-import { MapPin, Compass, Clock, ShieldAlert, Navigation, Landmark, CalendarRange, Bike } from "lucide-react";
+import { MapPin, Compass, ShieldAlert, Navigation, Landmark, CalendarRange } from "lucide-react";
 
 export const metadata = {
   title: "Location & Attractions",

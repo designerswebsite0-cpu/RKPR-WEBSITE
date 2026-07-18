@@ -83,7 +83,7 @@ export default function Footer() {
               href="/families"
               className="font-sans text-sm text-sand hover:text-accent-light transition-colors font-light"
             >
-              Families & Kids' Club
+              Families & Kids&apos; Club
             </Link>
             <Link
               href="/safety"

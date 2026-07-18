@@ -89,7 +89,7 @@ export default function Amenities() {
             </h1>
             <div className="w-16 h-[2px] bg-accent mx-auto mb-6" />
             <p className="font-sans text-base text-charcoal/80 font-light leading-relaxed">
-              Explore the premium services and facilities available during your stay. From our temperature-moderated infinity swimming pool to our creative kids' club, our amenities are designed for absolute comfort.
+              Explore the premium services and facilities available during your stay. From our temperature-moderated infinity swimming pool to our creative kids&apos; club, our amenities are designed for absolute comfort.
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function Amenities() {
           <div className="mt-16 bg-primary-dark/5 border border-primary/10 rounded-sm p-6 flex flex-col md:flex-row items-center gap-4 max-w-4xl mx-auto">
             <ShieldAlert className="text-accent shrink-0" size={24} />
             <p className="font-sans text-xs text-charcoal/75 leading-relaxed font-light">
-              <strong>Important Timing Update:</strong> Per our July 2026 audit (resolving CON-009 / CON-012), the Kids' Club closes at 7:00 PM daily, with last entry at 6:30 PM. On declared festival weekends, hours may extend to 8:00 PM subject to same-day staffing confirmations.
+              <strong>Important Timing Update:</strong> Per our July 2026 audit (resolving CON-009 / CON-012), the Kids&apos; Club closes at 7:00 PM daily, with last entry at 6:30 PM. On declared festival weekends, hours may extend to 8:00 PM subject to same-day staffing confirmations.
             </p>
           </div>
         </div>
