@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { MessageSquare, X, Send, Bot, Loader } from "lucide-react";
+import { MessageSquare, X, Send, Bot } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   ensureSession,
@@ -24,12 +24,19 @@ import type { DisplayMessage } from "@/components/webchat/types";
 const WELCOME_MESSAGE: DisplayMessage = {
   id: "welcome",
   role: "ai",
-  text: "Namaste and welcome to RKPR Resort! I am Aranya, your AI concierge. How may I help you discover our sanctuary today?",
+  text: "Namaste and welcome to RKPR Resort! I am Aranya, your concierge. How may I help you discover our sanctuary today?",
   status: "sent",
   createdAt: new Date().toISOString(),
 };
 
 const POLL_INTERVAL_MS = 10000;
+
+// Pacing to feel like a real person reading and typing a reply, not an
+// instant machine response: a short pause before anything shows a
+// "typing…" indicator, and a minimum total time before the reply appears
+// even if the backend genuinely answered faster than that.
+const TYPING_INDICATOR_DELAY_MS = 1200;
+const MIN_REPLY_DELAY_MS = 1800;
 
 function transcriptToDisplay(items: WebchatTranscriptMessage[]): DisplayMessage[] {
   const roleMap: Record<WebchatTranscriptMessage["sender_type"], DisplayMessage["role"]> = {
@@ -75,6 +82,7 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<DisplayMessage[]>([WELCOME_MESSAGE]);
   const [isSending, setIsSending] = useState(false);
+  const [isTypingVisible, setIsTypingVisible] = useState(false);
   const [bannerError, setBannerError] = useState<string | null>(null);
   const [sessionState, setSessionState] = useState<WebchatSessionState | null>(null);
   const [showContactPrompt, setShowContactPrompt] = useState(false);
@@ -109,7 +117,7 @@ export default function ChatWidget() {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
     }
-  }, [messages, isSending, prefersReducedMotion]);
+  }, [messages, isTypingVisible, prefersReducedMotion]);
 
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
@@ -166,6 +174,8 @@ export default function ChatWidget() {
             ],
       );
       setIsSending(true);
+      const sentAt = Date.now();
+      const typingTimer = setTimeout(() => setIsTypingVisible(true), TYPING_INDICATOR_DELAY_MS);
 
       try {
         let state = sessionState;
@@ -174,6 +184,16 @@ export default function ChatWidget() {
           setSessionState(state);
         }
         const result = await sendMessage(text, clientMessageId);
+
+        // Never reveal a reply faster than a real person plausibly would,
+        // even if the backend genuinely answered right away.
+        const elapsed = Date.now() - sentAt;
+        if (elapsed < MIN_REPLY_DELAY_MS) {
+          await new Promise((resolve) => setTimeout(resolve, MIN_REPLY_DELAY_MS - elapsed));
+        }
+        clearTimeout(typingTimer);
+        setIsTypingVisible(false);
+
         setMessages((prev) => prev.map((m) => (m.id === localId ? { ...m, status: "sent" } : m)));
         setSessionState((prev) =>
           prev
@@ -211,6 +231,9 @@ export default function ChatWidget() {
         }
         if (result.handoff.status !== "none") setShowContactPrompt(true);
       } catch (err) {
+        // A failure surfaces immediately — no reason to fake a delay on bad news.
+        clearTimeout(typingTimer);
+        setIsTypingVisible(false);
         setMessages((prev) => prev.map((m) => (m.id === localId ? { ...m, status: "failed" } : m)));
         setBannerError(errorMessageFor(err));
       } finally {
@@ -273,7 +296,7 @@ export default function ChatWidget() {
         {isOpen && (
           <motion.div
             role="dialog"
-            aria-label="Chat with Aranya, RKPR Resort's AI concierge"
+            aria-label="Chat with Aranya at RKPR Resort"
             initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.8, y: 50 }}
             animate={prefersReducedMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
             exit={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.8, y: 50 }}
@@ -292,7 +315,7 @@ export default function ChatWidget() {
                 <div>
                   <h2 className="font-serif text-sm font-semibold tracking-wide">Aranya</h2>
                   <p className="text-[10px] text-accent-light uppercase tracking-widest font-light">
-                    AI Concierge · Online
+                    Front Desk · Online
                   </p>
                 </div>
               </div>
@@ -326,14 +349,15 @@ export default function ChatWidget() {
                   onFeedback={message.role === "ai" && message.id !== "welcome" ? handleFeedback : undefined}
                 />
               ))}
-              {isSending && (
-                <div className="flex gap-2 self-start max-w-[80%]">
+              {isTypingVisible && (
+                <div className="flex gap-2 self-start max-w-[80%]" aria-label="Aranya is typing" role="status">
                   <div className="w-6 h-6 rounded-full bg-primary text-ivory flex items-center justify-center text-xs shrink-0">
                     <Bot size={12} />
                   </div>
-                  <div className="rounded-lg px-3 py-2 text-sm bg-white text-charcoal border border-sand/50 shadow-sm flex items-center gap-2">
-                    <Loader className="animate-spin text-accent" size={14} aria-hidden="true" />
-                    <span className="text-charcoal/60">Aranya is thinking…</span>
+                  <div className="rounded-lg px-4 py-3 bg-white border border-sand/50 shadow-sm flex items-center gap-1">
+                    <span className="typing-dot w-1.5 h-1.5 bg-charcoal/40 rounded-full" style={{ animationDelay: "0ms" }} />
+                    <span className="typing-dot w-1.5 h-1.5 bg-charcoal/40 rounded-full" style={{ animationDelay: "200ms" }} />
+                    <span className="typing-dot w-1.5 h-1.5 bg-charcoal/40 rounded-full" style={{ animationDelay: "400ms" }} />
                   </div>
                 </div>
               )}
