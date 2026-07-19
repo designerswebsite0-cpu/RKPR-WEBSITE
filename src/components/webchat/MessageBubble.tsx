@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bot, User, Users, RefreshCw, ThumbsUp, ThumbsDown } from "lucide-react";
+import { ConciergeBell, User, Users, RefreshCw, ThumbsUp, ThumbsDown } from "lucide-react";
 import CitationList from "./CitationList";
 import type { DisplayMessage } from "./types";
 
@@ -11,7 +11,7 @@ interface Props {
   onFeedback?: (rating: "up" | "down") => void;
 }
 
-const ICONS = { guest: User, ai: Bot, human: Users, system: Bot } as const;
+const ICONS = { guest: User, ai: ConciergeBell, human: Users, system: ConciergeBell } as const;
 
 export default function MessageBubble({ message, onRetry, onFeedback }: Props) {
   const [feedbackGiven, setFeedbackGiven] = useState<"up" | "down" | null>(null);

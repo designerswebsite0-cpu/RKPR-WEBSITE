@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import { MessageSquare, X, Send, Bot } from "lucide-react";
+import { MessageSquare, X, Send, ConciergeBell } from "lucide-react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import {
   ensureSession,
@@ -33,10 +33,18 @@ const POLL_INTERVAL_MS = 10000;
 
 // Pacing to feel like a real person reading and typing a reply, not an
 // instant machine response: a short pause before anything shows a
-// "typing…" indicator, and a minimum total time before the reply appears
-// even if the backend genuinely answered faster than that.
-const TYPING_INDICATOR_DELAY_MS = 1200;
-const MIN_REPLY_DELAY_MS = 1800;
+// "typing…" indicator, then a total reveal delay that scales with how
+// long the actual reply is — "yes"/"no" shouldn't wait as long as a full
+// room catalogue, since a real receptionist types short answers fast.
+const TYPING_INDICATOR_DELAY_MS = 600;
+const REPLY_DELAY_MIN_MS = 900;
+const REPLY_DELAY_MAX_MS = 7000;
+const REPLY_DELAY_MS_PER_CHAR = 14;
+
+function computeReplyDelayMs(replyText: string): number {
+  const scaled = REPLY_DELAY_MIN_MS + replyText.length * REPLY_DELAY_MS_PER_CHAR;
+  return Math.min(REPLY_DELAY_MAX_MS, Math.max(REPLY_DELAY_MIN_MS, scaled));
+}
 
 // A rough, client-side-only heuristic for "this probably isn't a quick
 // lookup" — never a business decision (the backend's own handoff/tool
@@ -69,6 +77,12 @@ const HEAVY_TASK_ACK_PHRASES = [
 function randomAckPhrase(): string {
   return HEAVY_TASK_ACK_PHRASES[Math.floor(Math.random() * HEAVY_TASK_ACK_PHRASES.length)];
 }
+
+// A beat of "reading the message" before the acknowledgment shows up —
+// instant feels robotic, so this is randomized within a human-plausible
+// window rather than fired the moment the guest hits send.
+const HEAVY_TASK_ACK_DELAY_MIN_MS = 1000;
+const HEAVY_TASK_ACK_DELAY_MAX_MS = 2000;
 
 function transcriptToDisplay(items: WebchatTranscriptMessage[]): DisplayMessage[] {
   const roleMap: Record<WebchatTranscriptMessage["sender_type"], DisplayMessage["role"]> = {
@@ -121,7 +135,7 @@ export default function ChatWidget() {
   const [hasUnread, setHasUnread] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const prefersReducedMotion = useReducedMotion();
 
   // Restore a session from a prior visit (page refresh) — never creates a
@@ -154,6 +168,16 @@ export default function ChatWidget() {
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
   }, [isOpen]);
+
+  // Auto-grow the composer with its content, like every other chat app,
+  // instead of staying a fixed single line — capped by the textarea's own
+  // max-height (128px), beyond which it scrolls internally.
+  useEffect(() => {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${el.scrollHeight}px`;
+  }, [input]);
 
   function openChat() {
     setIsOpen(true);
@@ -204,25 +228,31 @@ export default function ChatWidget() {
                 clientMessageId,
                 createdAt: new Date().toISOString(),
               },
-              // An immediate acknowledgment for anything that sounds like
-              // more than a quick lookup — a real receptionist says "let
-              // me check" before actually checking, not after.
-              ...(showHeavyTaskAck
-                ? [
-                    {
-                      id: `ack-${clientMessageId}`,
-                      role: "ai" as const,
-                      text: randomAckPhrase(),
-                      status: "sent" as const,
-                      createdAt: new Date().toISOString(),
-                    },
-                  ]
-                : []),
             ],
       );
       setIsSending(true);
       const sentAt = Date.now();
       const typingTimer = setTimeout(() => setIsTypingVisible(true), TYPING_INDICATOR_DELAY_MS);
+
+      // A real receptionist takes a beat to read the request before saying
+      // "let me check" — an instant acknowledgment reads as robotic, so
+      // this waits a human-plausible moment rather than firing immediately.
+      if (showHeavyTaskAck) {
+        setTimeout(
+          () =>
+            setMessages((prev) => [
+              ...prev,
+              {
+                id: `ack-${clientMessageId}`,
+                role: "ai",
+                text: randomAckPhrase(),
+                status: "sent",
+                createdAt: new Date().toISOString(),
+              },
+            ]),
+          HEAVY_TASK_ACK_DELAY_MIN_MS + Math.random() * (HEAVY_TASK_ACK_DELAY_MAX_MS - HEAVY_TASK_ACK_DELAY_MIN_MS),
+        );
+      }
 
       try {
         let state = sessionState;
@@ -232,11 +262,13 @@ export default function ChatWidget() {
         }
         const result = await sendMessage(text, clientMessageId);
 
-        // Never reveal a reply faster than a real person plausibly would,
-        // even if the backend genuinely answered right away.
+        // Never reveal a reply faster than a real person plausibly would —
+        // but don't hold a one-word "yes" to the same pace as a full room
+        // catalogue either, so the wait scales with the reply's length.
+        const targetDelay = computeReplyDelayMs(result.response_text ?? "");
         const elapsed = Date.now() - sentAt;
-        if (elapsed < MIN_REPLY_DELAY_MS) {
-          await new Promise((resolve) => setTimeout(resolve, MIN_REPLY_DELAY_MS - elapsed));
+        if (elapsed < targetDelay) {
+          await new Promise((resolve) => setTimeout(resolve, targetDelay - elapsed));
         }
         clearTimeout(typingTimer);
         setIsTypingVisible(false);
@@ -338,7 +370,7 @@ export default function ChatWidget() {
   const banner = handoffBannerText(sessionState);
 
   return (
-    <div className="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 z-50 font-sans select-none">
+    <div className="fixed bottom-0 right-0 sm:bottom-6 sm:right-6 z-50 font-sans">
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -357,7 +389,7 @@ export default function ChatWidget() {
             <div className="bg-primary text-ivory px-4 py-4 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-ivory">
-                  <Bot size={18} aria-hidden="true" />
+                  <ConciergeBell size={18} aria-hidden="true" />
                 </div>
                 <div>
                   <h2 className="font-serif text-sm font-semibold tracking-wide">Aranya</h2>
@@ -399,7 +431,7 @@ export default function ChatWidget() {
               {isTypingVisible && (
                 <div className="flex gap-2 self-start max-w-[80%]" aria-label="Aranya is typing" role="status">
                   <div className="w-6 h-6 rounded-full bg-primary text-ivory flex items-center justify-center text-xs shrink-0">
-                    <Bot size={12} />
+                    <ConciergeBell size={12} />
                   </div>
                   <div className="rounded-lg px-4 py-3 bg-white border border-sand/50 shadow-sm flex items-center gap-1">
                     <span className="typing-dot w-1.5 h-1.5 bg-charcoal/40 rounded-full" style={{ animationDelay: "0ms" }} />
@@ -433,20 +465,29 @@ export default function ChatWidget() {
 
             {/* Composer */}
             <form onSubmit={handleSend} className="border-t border-sand bg-white p-3 flex gap-2 shrink-0">
-              <input
+              <textarea
                 ref={inputRef}
-                type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                onKeyDown={(e) => {
+                  // Enter sends, Shift+Enter inserts a newline — the
+                  // standard convention for every chat app, not something a
+                  // guest should have to think about.
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    e.currentTarget.form?.requestSubmit();
+                  }
+                }}
                 placeholder="Ask about rooms, dining, spa, policies…"
                 aria-label="Type your message"
-                className="flex-1 border border-sand rounded-sm px-3 py-2 text-sm focus:outline-none focus:border-accent text-charcoal"
+                rows={1}
+                className="flex-1 resize-none border border-sand rounded-sm px-3 py-2 text-sm leading-relaxed focus:outline-none focus:border-accent text-charcoal max-h-32 overflow-y-auto"
               />
               <button
                 type="submit"
                 disabled={isSending || !input.trim()}
                 aria-label="Send message"
-                className="bg-primary text-ivory p-2.5 rounded-sm hover:bg-accent disabled:opacity-40 disabled:hover:bg-primary transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent flex items-center justify-center shrink-0"
+                className="bg-primary text-ivory p-2.5 rounded-sm hover:bg-accent disabled:opacity-40 disabled:hover:bg-primary transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent flex items-center justify-center shrink-0 self-end"
               >
                 <Send size={16} />
               </button>
@@ -461,7 +502,7 @@ export default function ChatWidget() {
           whileHover={prefersReducedMotion ? undefined : { scale: 1.05 }}
           whileTap={prefersReducedMotion ? undefined : { scale: 0.95 }}
           onClick={openChat}
-          aria-label="Chat with Aranya, RKPR Resort's AI concierge"
+          aria-label="Chat with Aranya at RKPR Resort"
           aria-haspopup="dialog"
           aria-expanded={isOpen}
           className="m-4 sm:m-0 bg-primary text-ivory w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:bg-accent transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-light relative border border-primary-dark"
