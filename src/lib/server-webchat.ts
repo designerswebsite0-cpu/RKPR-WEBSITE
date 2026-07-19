@@ -1,4 +1,5 @@
 import { cookies, headers } from "next/headers";
+import { NextResponse } from "next/server";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
 
@@ -53,4 +54,19 @@ export async function clearWebchatCookies(): Promise<void> {
   const store = await cookies();
   store.delete(TOKEN_COOKIE);
   store.delete(SESSION_ID_COOKIE);
+}
+
+/** Every webchat Route Handler wraps its body in this — an unhandled
+ * exception (bad FastAPI_BASE_URL, a network failure, malformed upstream
+ * JSON, etc.) must never surface as a bare platform crash (empty body, no
+ * detail anywhere). Logs the real error server-side (visible in Vercel's
+ * Runtime Logs, including the resolved API_BASE_URL so a misconfigured
+ * env var is immediately obvious there) and always returns the same safe,
+ * generic envelope to the client — never a stack trace or internal URL. */
+export function logWebchatRouteError(context: string, err: unknown): NextResponse {
+  console.error(`[webchat:${context}] API_BASE_URL=${API_BASE_URL}`, err);
+  return NextResponse.json(
+    { success: false, error: { code: "INTERNAL_ERROR", message: "Something went wrong. Please try again shortly." } },
+    { status: 500 },
+  );
 }
