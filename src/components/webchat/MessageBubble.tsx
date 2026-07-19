@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ConciergeBell, User, Users, RefreshCw, ThumbsUp, ThumbsDown } from "lucide-react";
 import CitationList from "./CitationList";
+import MarkdownText from "./MarkdownText";
 import type { DisplayMessage } from "./types";
 
 interface Props {
@@ -40,7 +41,11 @@ export default function MessageBubble({ message, onRetry, onFeedback }: Props) {
         {message.role === "human" && (
           <p className="mb-0.5 text-[10px] uppercase tracking-widest text-ivory/70">Resort Staff</p>
         )}
-        <p className="whitespace-pre-wrap break-words">{message.text}</p>
+        {message.role === "ai" || message.role === "human" ? (
+          <MarkdownText text={message.text} />
+        ) : (
+          <p className="whitespace-pre-wrap break-words">{message.text}</p>
+        )}
 
         {message.status === "failed" && onRetry && (
           <button

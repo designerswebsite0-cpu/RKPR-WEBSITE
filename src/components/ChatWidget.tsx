@@ -46,43 +46,23 @@ function computeReplyDelayMs(replyText: string): number {
   return Math.min(REPLY_DELAY_MAX_MS, Math.max(REPLY_DELAY_MIN_MS, scaled));
 }
 
-// A rough, client-side-only heuristic for "this probably isn't a quick
-// lookup" — never a business decision (the backend's own handoff/tool
-// logic is what actually decides anything), just a cue for showing an
-// immediate acknowledgment before the real reply, the way a real
-// receptionist would say "let me check" before actually checking.
-const HEAVY_TASK_KEYWORDS = [
-  "book", "booking", "reserve", "reservation",
-  "cancel", "cancellation",
-  "refund", "reimburse",
-  "modify my", "change my booking", "change my reservation", "reschedule",
-  "complaint", "complain",
-  "speak to staff", "speak to a human", "talk to a person", "human agent",
-  "negotiate", "discount", "lower the price",
-];
-
-function isHeavyTask(text: string): boolean {
-  const lowered = text.toLowerCase();
-  return HEAVY_TASK_KEYWORDS.some((keyword) => lowered.includes(keyword));
-}
+// Reactive, not predicted: we don't guess from keywords whether a request
+// is "heavy" (that felt arbitrary and fired for routine messages too) —
+// instead, only show an acknowledgment if the real reply is actually
+// taking a while, so it appears rarely, and only when it's true.
+const SLOW_REPLY_ACK_THRESHOLD_MS = 15000;
 
 const HEAVY_TASK_ACK_PHRASES = [
-  "Just a sec, let me look into that for you…",
-  "One moment please…",
-  "Give me a moment to check that…",
-  "Just a moment, checking now…",
-  "Let me pull that up for you, one sec…",
+  "Just a sec, still pulling that up for you…",
+  "One moment, almost there…",
+  "Still checking on that for you…",
+  "Just a moment longer…",
+  "Thanks for your patience, one more sec…",
 ];
 
 function randomAckPhrase(): string {
   return HEAVY_TASK_ACK_PHRASES[Math.floor(Math.random() * HEAVY_TASK_ACK_PHRASES.length)];
 }
-
-// A beat of "reading the message" before the acknowledgment shows up —
-// instant feels robotic, so this is randomized within a human-plausible
-// window rather than fired the moment the guest hits send.
-const HEAVY_TASK_ACK_DELAY_MIN_MS = 1000;
-const HEAVY_TASK_ACK_DELAY_MAX_MS = 2000;
 
 function transcriptToDisplay(items: WebchatTranscriptMessage[]): DisplayMessage[] {
   const roleMap: Record<WebchatTranscriptMessage["sender_type"], DisplayMessage["role"]> = {
@@ -214,7 +194,6 @@ export default function ChatWidget() {
       const localId = retry?.id ?? `local-${clientMessageId}`;
       setBannerError(null);
 
-      const showHeavyTaskAck = !retry && isHeavyTask(text);
       setMessages((prev) =>
         retry
           ? prev.map((m) => (m.id === localId ? { ...m, status: "sending" } : m))
@@ -234,25 +213,23 @@ export default function ChatWidget() {
       const sentAt = Date.now();
       const typingTimer = setTimeout(() => setIsTypingVisible(true), TYPING_INDICATOR_DELAY_MS);
 
-      // A real receptionist takes a beat to read the request before saying
-      // "let me check" — an instant acknowledgment reads as robotic, so
-      // this waits a human-plausible moment rather than firing immediately.
-      if (showHeavyTaskAck) {
-        setTimeout(
-          () =>
-            setMessages((prev) => [
-              ...prev,
-              {
-                id: `ack-${clientMessageId}`,
-                role: "ai",
-                text: randomAckPhrase(),
-                status: "sent",
-                createdAt: new Date().toISOString(),
-              },
-            ]),
-          HEAVY_TASK_ACK_DELAY_MIN_MS + Math.random() * (HEAVY_TASK_ACK_DELAY_MAX_MS - HEAVY_TASK_ACK_DELAY_MIN_MS),
-        );
-      }
+      // Only shows up if the reply is genuinely slow — never predicted
+      // from the message's content, so it appears rarely rather than on
+      // every booking/refund-shaped request.
+      const slowReplyTimer = setTimeout(
+        () =>
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: `ack-${clientMessageId}`,
+              role: "ai",
+              text: randomAckPhrase(),
+              status: "sent",
+              createdAt: new Date().toISOString(),
+            },
+          ]),
+        SLOW_REPLY_ACK_THRESHOLD_MS,
+      );
 
       try {
         let state = sessionState;
@@ -271,6 +248,7 @@ export default function ChatWidget() {
           await new Promise((resolve) => setTimeout(resolve, targetDelay - elapsed));
         }
         clearTimeout(typingTimer);
+        clearTimeout(slowReplyTimer);
         setIsTypingVisible(false);
 
         setMessages((prev) => prev.map((m) => (m.id === localId ? { ...m, status: "sent" } : m)));
@@ -312,6 +290,7 @@ export default function ChatWidget() {
       } catch (err) {
         // A failure surfaces immediately — no reason to fake a delay on bad news.
         clearTimeout(typingTimer);
+        clearTimeout(slowReplyTimer);
         setIsTypingVisible(false);
         setMessages((prev) => prev.map((m) => (m.id === localId ? { ...m, status: "failed" } : m)));
         setBannerError(errorMessageFor(err));
