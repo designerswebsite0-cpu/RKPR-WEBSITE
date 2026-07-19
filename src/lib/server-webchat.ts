@@ -1,7 +1,17 @@
 import { cookies, headers } from "next/headers";
 import { NextResponse } from "next/server";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+/** A bare host (e.g. "my-app.up.railway.app", copied straight from a
+ * platform's dashboard without its "https://") is not a valid URL — fetch()
+ * throws ERR_INVALID_URL rather than guessing a scheme, which previously
+ * surfaced as an opaque crash. Deployment envs almost never intend plain
+ * HTTP, so a missing scheme is treated as a copy-paste omission and
+ * defaulted to https:// rather than left to fail. */
+function normalizeApiBaseUrl(raw: string): string {
+  return /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+}
+
+const API_BASE_URL = normalizeApiBaseUrl(process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000");
 
 // Both HttpOnly — the raw session token never reaches browser JavaScript
 // (Phase 5 brief §3: "Do not store API secrets in local storage"). The
