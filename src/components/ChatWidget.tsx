@@ -181,17 +181,33 @@ export default function ChatWidget() {
             : prev,
         );
         if (result.response_text) {
-          setMessages((prev) => [
-            ...prev,
-            {
-              id: `ai-${clientMessageId}`,
-              role: "ai",
-              text: result.response_text as string,
-              citations: result.citations,
-              status: "sent",
-              createdAt: new Date().toISOString(),
-            },
-          ]);
+          // Use the backend's real message id (when available) rather than
+          // a synthetic one — the staff-reply poll below dedupes incoming
+          // transcript messages by id, so a synthetic id here would never
+          // match the real one it later fetches, causing this same AI
+          // reply to appear a second time (without citations, since the
+          // transcript endpoint doesn't include them) once the poll runs.
+          const aiMessageId = result.message_id ?? `ai-${clientMessageId}`;
+          setMessages((prev) => {
+            // Idempotent add: React 19's development Strict Mode replays
+            // an event handler's post-await continuation once (mount →
+            // cleanup → mount, applied to the async continuation, not just
+            // effects), which would otherwise append this exact reply
+            // twice for a single guest message. Guarding on id makes this
+            // safe regardless of how many times it's invoked.
+            if (prev.some((m) => m.id === aiMessageId)) return prev;
+            return [
+              ...prev,
+              {
+                id: aiMessageId,
+                role: "ai",
+                text: result.response_text as string,
+                citations: result.citations,
+                status: "sent",
+                createdAt: new Date().toISOString(),
+              },
+            ];
+          });
         }
         if (result.handoff.status !== "none") setShowContactPrompt(true);
       } catch (err) {
@@ -300,6 +316,7 @@ export default function ChatWidget() {
               className="flex-1 overflow-y-auto p-4 flex flex-col gap-4 bg-sand/20"
               aria-live="polite"
               aria-atomic="false"
+              data-lenis-prevent
             >
               {messages.map((message) => (
                 <MessageBubble
