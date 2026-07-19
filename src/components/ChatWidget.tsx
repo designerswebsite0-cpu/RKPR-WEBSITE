@@ -38,6 +38,38 @@ const POLL_INTERVAL_MS = 10000;
 const TYPING_INDICATOR_DELAY_MS = 1200;
 const MIN_REPLY_DELAY_MS = 1800;
 
+// A rough, client-side-only heuristic for "this probably isn't a quick
+// lookup" — never a business decision (the backend's own handoff/tool
+// logic is what actually decides anything), just a cue for showing an
+// immediate acknowledgment before the real reply, the way a real
+// receptionist would say "let me check" before actually checking.
+const HEAVY_TASK_KEYWORDS = [
+  "book", "booking", "reserve", "reservation",
+  "cancel", "cancellation",
+  "refund", "reimburse",
+  "modify my", "change my booking", "change my reservation", "reschedule",
+  "complaint", "complain",
+  "speak to staff", "speak to a human", "talk to a person", "human agent",
+  "negotiate", "discount", "lower the price",
+];
+
+function isHeavyTask(text: string): boolean {
+  const lowered = text.toLowerCase();
+  return HEAVY_TASK_KEYWORDS.some((keyword) => lowered.includes(keyword));
+}
+
+const HEAVY_TASK_ACK_PHRASES = [
+  "Just a sec, let me look into that for you…",
+  "One moment please…",
+  "Give me a moment to check that…",
+  "Just a moment, checking now…",
+  "Let me pull that up for you, one sec…",
+];
+
+function randomAckPhrase(): string {
+  return HEAVY_TASK_ACK_PHRASES[Math.floor(Math.random() * HEAVY_TASK_ACK_PHRASES.length)];
+}
+
 function transcriptToDisplay(items: WebchatTranscriptMessage[]): DisplayMessage[] {
   const roleMap: Record<WebchatTranscriptMessage["sender_type"], DisplayMessage["role"]> = {
     customer: "guest",
@@ -158,6 +190,7 @@ export default function ChatWidget() {
       const localId = retry?.id ?? `local-${clientMessageId}`;
       setBannerError(null);
 
+      const showHeavyTaskAck = !retry && isHeavyTask(text);
       setMessages((prev) =>
         retry
           ? prev.map((m) => (m.id === localId ? { ...m, status: "sending" } : m))
@@ -171,6 +204,20 @@ export default function ChatWidget() {
                 clientMessageId,
                 createdAt: new Date().toISOString(),
               },
+              // An immediate acknowledgment for anything that sounds like
+              // more than a quick lookup — a real receptionist says "let
+              // me check" before actually checking, not after.
+              ...(showHeavyTaskAck
+                ? [
+                    {
+                      id: `ack-${clientMessageId}`,
+                      role: "ai" as const,
+                      text: randomAckPhrase(),
+                      status: "sent" as const,
+                      createdAt: new Date().toISOString(),
+                    },
+                  ]
+                : []),
             ],
       );
       setIsSending(true);
