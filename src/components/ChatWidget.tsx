@@ -117,6 +117,16 @@ export default function ChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const prefersReducedMotion = useReducedMotion();
+  // Guards every "offer to leave contact details" trigger below (handoff,
+  // the "talk to staff" quick action, and the general-conversation one
+  // added here) so the prompt appears at most once per session — a real
+  // receptionist doesn't ask for your number three times in one visit.
+  const contactPromptShownRef = useRef(false);
+  // Counts guest messages independently of the `messages` state array —
+  // dispatchMessage is memoized on [sessionState] only, so `messages`
+  // itself would be a stale closure inside it (see the counter's use
+  // below, not a `messages.filter(...)` read).
+  const guestMessageCountRef = useRef(0);
 
   // Restore a session from a prior visit (page refresh) — never creates a
   // new one on its own (brief §3: a guest who never opens the widget
@@ -193,6 +203,7 @@ export default function ChatWidget() {
       const clientMessageId = retry?.clientMessageId ?? generateClientMessageId();
       const localId = retry?.id ?? `local-${clientMessageId}`;
       setBannerError(null);
+      if (!retry) guestMessageCountRef.current += 1;
 
       setMessages((prev) =>
         retry
@@ -286,7 +297,21 @@ export default function ChatWidget() {
             ];
           });
         }
-        if (result.handoff.status !== "none") setShowContactPrompt(true);
+        if (result.handoff.status !== "none" && !contactPromptShownRef.current) {
+          contactPromptShownRef.current = true;
+          setShowContactPrompt(true);
+        } else if (!contactPromptShownRef.current && guestMessageCountRef.current === 2) {
+          // Not every guest triggers a handoff or books anything — most
+          // just ask a question and leave. Without this, a guest who only
+          // ever has quick Q&A conversations can never be recognized on a
+          // future visit (no phone/email on file to match against), no
+          // matter how the session cookie itself is tuned. Offered once,
+          // after they've already gotten one real answer (never on the
+          // very first reply), and always skippable — same non-blocking
+          // contract as the handoff-triggered prompt (ContactPrompt.tsx).
+          contactPromptShownRef.current = true;
+          setShowContactPrompt(true);
+        }
       } catch (err) {
         // A failure surfaces immediately — no reason to fake a delay on bad news.
         clearTimeout(typingTimer);
@@ -328,6 +353,7 @@ export default function ChatWidget() {
             createdAt: new Date().toISOString(),
           },
         ]);
+        contactPromptShownRef.current = true;
         setShowContactPrompt(true);
       } catch {
         setBannerError(`Couldn't reach our team right now — please call reception at ${resortDetails.phone}.`);
