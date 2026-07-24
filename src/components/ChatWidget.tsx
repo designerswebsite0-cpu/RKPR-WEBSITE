@@ -24,7 +24,7 @@ import type { DisplayMessage } from "@/components/webchat/types";
 const WELCOME_MESSAGE: DisplayMessage = {
   id: "welcome",
   role: "ai",
-  text: "Namaste and welcome to RKPR Resort! I am Aranya, your concierge. How may I help you discover our sanctuary today?",
+  text: "Hi, I'm Aranya at RKPR's front desk — what can I help with?",
   status: "sent",
   createdAt: new Date().toISOString(),
 };
